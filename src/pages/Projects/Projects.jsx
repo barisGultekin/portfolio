@@ -1,9 +1,33 @@
-import React from 'react'
+import React, { useState } from "react";
+import "./Projects.css";
 
-function Projects() {
+import SearchBar from "../../components/SearchBar/SearchBar";
+import ProjectCard from "../../components/ProjectCard/ProjectCard";
+import projectsData from "../../projectsData";
+
+const Projects = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const filteredProjects = projectsData.filter((project) =>
+    project.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
-    <div>Projects</div>
-  )
-}
+    <div className="projects">
 
-export default Projects
+      <div className="projects-header">
+        <h1>Projects</h1>
+        <p>Here you can check out my projects.</p>
+        <SearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm} />
+      </div>
+
+      <div className="projects-list">
+        {filteredProjects.map((project) => (
+          <ProjectCard key={project.id} {...project} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Projects;

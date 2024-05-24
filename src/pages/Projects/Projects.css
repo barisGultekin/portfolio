@@ -1,0 +1,14 @@
+.projects {
+    padding: 10em 6em;
+}
+
+.projects-header {
+    margin-bottom: 2em;
+}
+
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  min-height: 60vh;
+}

@@ -19,11 +19,6 @@ function Navbar() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/about" activeClassName="active">
-              About
-            </NavLink>
-          </li>
-          <li>
             <NavLink to="/contact" activeClassName="active">
               Contact
             </NavLink>

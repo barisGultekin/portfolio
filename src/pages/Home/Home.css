@@ -1,0 +1,68 @@
+
+
+.home {
+    
+}
+
+.home section {
+    text-align: left;
+    min-height: 100vh;
+    padding: 0 12em;
+    z-index: 1000;
+    overflow-x: hidden;
+}
+
+.background-gradient {
+    position: absolute;
+    top: 0;
+
+    width: 120%;
+    opacity: 0.4;
+
+    overflow: hidden;
+}
+
+.home-intro {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
+
+.home-intro h1 {
+    margin-bottom: .2em;
+}
+
+.home-intro p {
+    font-size: 1.4em;
+}
+
+.home-convertButton {
+    margin-top: 1em;
+}
+
+.home-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home-recentProjects {
+    position: relative;
+    margin: 5em 0;
+    overflow: visible;
+}
+
+.home-projectsList {
+    padding: 3em 0 4em 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.home-contactForm {
+    margin-top: 10em;
+}

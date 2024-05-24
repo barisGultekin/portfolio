@@ -1,0 +1,29 @@
+.searchBar {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+    background-color: #2d2d2d;
+    padding: .5em 1em;
+    border-radius: 4em;
+}
+
+.searchBar-icon {
+    width: 2.4em;
+    height: 2.4em;
+    border-radius: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #454545;
+}
+
+.searchBar-textField {
+    font-size: 1em;
+    color: #fff;
+    border: none;
+    padding: 1em .8em;
+    outline: none;
+    background-color: transparent;
+    width: 100%;
+}

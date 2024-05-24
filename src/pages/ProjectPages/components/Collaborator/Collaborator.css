@@ -1,0 +1,10 @@
+.collaborator {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.collaborator img {
+    width: 3em;
+    border-radius: 3em;
+}

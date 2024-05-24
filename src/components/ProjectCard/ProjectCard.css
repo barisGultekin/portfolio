@@ -1,0 +1,60 @@
+.pc {
+    padding: 18px;
+
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.1px);
+    -webkit-backdrop-filter: blur(7.1px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+
+    border-radius: 16px;
+
+    transition: transform 0.2s;
+
+    text-decoration: none;
+    color: #fff;
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: .6em;
+
+    flex: 1 1 250px;
+    box-sizing: border-box;
+}
+
+.pc:hover {
+    transform: scale(1.02);
+}
+
+.pc p {
+    margin: 0;
+}
+
+.pc h3 {
+    font-size: 1.4em;
+}
+
+.pc-image {
+    width: 100%;
+    border-radius: 8px;
+    aspect-ratio: 2/1;
+
+    object-fit: cover;
+}
+
+.pc-tags {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.pc-tag {
+    padding: .6em .8em;
+    background-color: var(--main-color-transparent);
+    color: var(--main-color);
+    border-radius: 8px;
+
+    font-size: .8em;
+}
