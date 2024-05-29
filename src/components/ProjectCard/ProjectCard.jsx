@@ -14,7 +14,7 @@ const ProjectCard = ({ title, slug, description, imageUrl, tags }) => (
         </span>
       ))}
     </div>
-    <p>{description}</p>
+    
   </Link>
 );
 

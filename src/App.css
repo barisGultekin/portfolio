@@ -1,13 +1,17 @@
 :root {
   --background-color: #161616;
-  --main-color: #90B4D6;
-  --main-color-transparent: rgba(144, 180, 214, 0.2);
+  --background-color-light: #212121;
+  --main-color: #1db954;
+  --main-color-transparent: rgba(29, 185, 84, 0.2);
   --main-light-gray: #A7A7A7;
   --main-dark-transparent: rgba(37, 80, 173, 0.6);
+  --ivory: #cfcfc4;
 }
 
 body,
 html {
+  font-family: 'Montserrat', Helvetica, sans-serif;
+
   margin: 0;
   padding: 0;
   color: #fff;
