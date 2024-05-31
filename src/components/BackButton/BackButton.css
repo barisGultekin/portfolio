@@ -4,9 +4,13 @@
     gap: .2em;
     color: #fff;
 
+    width: fit-content;
+
     margin-bottom: 2em;
     transition: transform 0.3s ease;
     text-decoration: none;
+
+    padding: .1em .1em .1em 0;
 
     position: relative !important;
     z-index: 1002 !important;
@@ -15,6 +19,11 @@
 .backButton:hover {
     cursor: pointer;
 
+    width: auto;
     transform: scale(1.01);
     color: var(--main-color);
+}
+
+.backButton p{
+    cursor: pointer;
 }

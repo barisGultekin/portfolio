@@ -14,17 +14,20 @@ const Projects = () => {
 
   return (
     <div className="projects">
+      <div className="projects-content">
+        <div className="projects-header">
+          <h1>Projects</h1>
+          <p>Here you can check out my projects.</p>
+          <div className="projects-searchBar">
+            <SearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm} />
+          </div>
+        </div>
 
-      <div className="projects-header">
-        <h1>Projects</h1>
-        <p>Here you can check out my projects.</p>
-        <SearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm} />
-      </div>
-
-      <div className="projects-list">
-        {filteredProjects.map((project) => (
-          <ProjectCard key={project.id} {...project} />
-        ))}
+        <div className="projects-list">
+          {filteredProjects.map((project) => (
+            <ProjectCard key={project.id} {...project} />
+          ))}
+        </div>
       </div>
     </div>
   );

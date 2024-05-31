@@ -1,10 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./components/ProjectPages.css";
 
 import BackButton from "../../components/BackButton/BackButton";
 
 function Brevvit() {
   const [selectedSection, setSelectedSection] = useState("overview");
+  const contentRef = useRef(null);
+
+  useEffect(() => {
+    if (contentRef.current) {
+      contentRef.current.classList.remove("fade-in");
+      void contentRef.current.offsetWidth;
+      contentRef.current.classList.add("fade-in");
+    }
+  }, [selectedSection]);
 
   const renderSectionContent = () => {
     switch (selectedSection) {
@@ -62,9 +71,9 @@ function Brevvit() {
             </p>
             <div className="imgWrapper">
               <img
-                className="brevvitODimg"
+                className="pp-img"
                 src="/assets/projectAssets/brevvit/brevvitDeviceScreens.webp"
-                alt="brevvitux-gif"
+                alt="brevvit-ondevice"
               />
             </div>
             <p></p>
@@ -121,7 +130,9 @@ function Brevvit() {
             </button>
           </div>
         </div>
-        <div className="pp-content">{renderSectionContent()}</div>
+        <div className="fade-in" ref={contentRef}>
+          <div className="pp-content">{renderSectionContent()}</div>
+        </div>
       </div>
     </div>
   );

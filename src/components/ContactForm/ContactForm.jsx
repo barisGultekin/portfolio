@@ -1,74 +1,73 @@
-import React, { useState } from "react";
-import emailjs from "emailjs-com";
+import React, { useState, useRef, useEffect } from "react";
+import emailjs from "@emailjs/browser";
 import "./ContactForm.css";
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: ""
-  });
+  const form = useRef();
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
       .sendForm(
-        "YOUR_SERVICE_ID", // Replace with your EmailJS service ID
-        "YOUR_TEMPLATE_ID", // Replace with your EmailJS template ID
-        e.target,
-        "YOUR_USER_ID" // Replace with your EmailJS user ID
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_EMAILJS_USER_ID
       )
       .then(
         (result) => {
-          alert("Message Sent Successfully!");
+          console.log("SUCCESS!", result.text);
         },
         (error) => {
-          alert("An error occurred, please try again.");
+          console.log("FAILED...", error.text);
         }
       );
 
-    setFormData({ name: "", email: "", message: "" });
+    e.target.reset();
   };
 
+  useEffect(() => {
+    console.log("Service ID:", process.env.REACT_APP_EMAILJS_SERVICE_ID);
+    console.log("Template ID:", process.env.REACT_APP_EMAILJS_TEMPLATE_ID);
+    console.log("User ID:", process.env.REACT_APP_EMAILJS_USER_ID);
+  }, []);
+
   return (
-    <form className="contact-form" onSubmit={handleSubmit}>
-      <h2>Contact Me</h2>
-      <div className="form-group">
-        <label>Name</label>
-        <input
-          type="text"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div className="form-group">
-        <label>Email</label>
-        <input
-          type="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div className="form-group">
-        <label>Message</label>
-        <textarea
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-          required
-        ></textarea>
-      </div>
-      <button type="submit">Send</button>
-    </form>
+    <div className="contact-form-wrapper">
+      <form ref={form} onSubmit={sendEmail} className="contact-form">
+        <h2>Leave a quick message</h2>
+        <div className="form-group">
+          <label>Name</label>
+          <input
+            type="text"
+            name="user_name"
+            placeholder="Your Name"
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label>Email</label>
+          <input
+            type="email"
+            name="user_email"
+            placeholder="Your Email"
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label>Message</label>
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" className="button">
+          Send
+        </button>
+      </form>
+    </div>
   );
 };
 

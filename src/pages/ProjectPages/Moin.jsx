@@ -1,10 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./components/ProjectPages.css";
 
 import BackButton from "../../components/BackButton/BackButton";
 
+import Collaborator from "./components/Collaborator/Collaborator";
+
 function Moin() {
   const [selectedSection, setSelectedSection] = useState("overview");
+  const contentRef = useRef(null);
+
+  useEffect(() => {
+    if (contentRef.current) {
+      contentRef.current.classList.remove("fade-in");
+      void contentRef.current.offsetWidth;
+      contentRef.current.classList.add("fade-in");
+    }
+  }, [selectedSection]);
 
   const renderSectionContent = () => {
     switch (selectedSection) {
@@ -44,7 +55,9 @@ function Moin() {
             </button>
           </div>
         </div>
-        <div className="pp-content">{renderSectionContent()}</div>
+        <div className="fade-in" ref={contentRef}>
+          <div className="pp-content">{renderSectionContent()}</div>
+        </div>
       </div>
     </div>
   );

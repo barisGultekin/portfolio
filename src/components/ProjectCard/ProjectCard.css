@@ -9,11 +9,10 @@
 
     border-radius: 16px;
 
-    transition: transform 0.2s;
+    transition: transform 0.3s ease, background 0.3s ease;
 
     text-decoration: none;
     color: #fff;
-    height: 256px;
 
     display: flex;
     flex-direction: column;
@@ -26,14 +25,17 @@
 
 .pc:hover {
     transform: scale(1.02);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .pc p {
     margin: 0;
+    cursor: pointer;
 }
 
 .pc h3 {
     font-size: 1.4em;
+    cursor: pointer;
 }
 
 .pc-image {

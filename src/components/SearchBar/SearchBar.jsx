@@ -10,7 +10,7 @@ const SearchBar = ({ searchTerm, onSearchChange }) => {
 
   return (
     <div className="searchBar">
-      <div className="searchBar-icon">
+      <div className={`searchBar-icon ${isFocused ? "focused" : ""}`}>
         <LuSearch />
       </div>
       <input
@@ -20,7 +20,7 @@ const SearchBar = ({ searchTerm, onSearchChange }) => {
         onChange={(e) => onSearchChange(e.target.value)}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
-        className={`searchBar-textField ${isFocused ? "focused" : ""}`}
+        className="searchBar-textField"
       />
     </div>
   );

@@ -4,12 +4,12 @@ import "./Footer.css";
 function Footer() {
   return (
     <footer className="footer">
-      <h1>Ali Barış Gültekin</h1>
-      <h3>Personal Portfolio Website</h3>
-
-      <div className="footer-socialIcons"></div>
-
+      <div className="footer-line"></div>
+      <div className="footer-content">
       <p className="copyright">2024 © Ali Barış Gültekin</p>
+      <p className="copyright"><a href="privacy">Privacy</a> and <a href="terms">Terms</a></p>
+      </div>
+      
     </footer>
   );
 }

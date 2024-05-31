@@ -3,10 +3,8 @@
     display: flex;
     overflow-x: hidden;
     white-space: nowrap;
-    width: 100%;
     position: relative;
-
-    padding: 1em;
+    padding: 1em 0;
   }
   
   .banner-inner {

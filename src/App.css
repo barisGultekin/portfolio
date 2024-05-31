@@ -1,8 +1,8 @@
 :root {
-  --background-color: #161616;
+  --background-color: #0f1818;
   --background-color-light: #212121;
-  --main-color: #1db954;
-  --main-color-transparent: rgba(29, 185, 84, 0.2);
+  --main-color: #BEFF6C;
+  --main-color-transparent: rgba(190, 255, 108, 0.2);
   --main-light-gray: #A7A7A7;
   --main-dark-transparent: rgba(37, 80, 173, 0.6);
   --ivory: #cfcfc4;
@@ -18,45 +18,107 @@ html {
   height: 100%;
 
   background-color: var(--background-color);
+  
 }
 
-body {
-  overflow-x: hidden;
+.bg {
+  position: absolute;
+  top: 0;
+
+  width: 120%;
+  opacity: 0.3;
+
+  overflow: hidden;
+  z-index: 0 !important;
 }
 
 .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   background-color: var(--main-color-transparent);
   color: var(--main-color);
-  
+
+  font-size: 1em;
+
   padding: 1.2em 1.6em;
   border-radius: 8px;
 
   width: fit-content;
+  min-width: 128px;
 
   transition: color 0.3s ease;
   transition: transform 0.3s ease;
 
   text-decoration: none;
+  border: none;
 }
 
 .button:hover {
   background-color: var(--main-color);
-  color: #fff;
+  color: var(--background-color);
   cursor: pointer;
   transform: scale(1.03);
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 2.4em;
   margin: 0;
+  cursor: default;
 }
 
 h2 {
-  font-size: 1.8em;
+  font-size: 1.6em;
   margin: 0;
   font-weight: normal;
+  cursor: default;
 }
 
 h3 {
   margin: 0;
+  cursor: default;
+}
+
+p {
+  cursor: default;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  h1, h2, h3, h4, p {
+    text-align: center;
+  }
+
+
+  h1 {
+    font-size: 1.8em;
+    margin: 0;
+  }
+  
+  h2 {
+    font-size: 1em;
+    margin: 0;
+    font-weight: normal;
+  }
+  
+  h3 {
+    margin: 0;
+    
+  }
+  
+  p {
+    font-size: 1em;
+  }
 }

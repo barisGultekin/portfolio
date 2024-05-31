@@ -1,10 +1,61 @@
 .collaborator {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 1em;
+
+    padding: .3em .6em;
+    border-radius: 8px;
+
+    color: #fff;
+    text-decoration: none;
+}
+
+.collaborator:hover {
+    background: rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+}
+
+.collaborator:hover p {
+    cursor: pointer;
 }
 
 .collaborator img {
     width: 3em;
     border-radius: 3em;
 }
+
+.collaborator .tooltip {
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+
+    visibility: hidden;
+    width: fit-content;
+    white-space: nowrap;
+    
+    text-align: center;
+    padding: 1em;
+    border-radius: 8px;
+  
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1002;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+  
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+ 
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .collaborator:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }

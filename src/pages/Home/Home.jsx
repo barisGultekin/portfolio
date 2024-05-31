@@ -1,15 +1,20 @@
 import React from "react";
 import "./Home.css";
 
-import ProjectCardHome from "../../components/ProjectCardHome/ProjectCardHome";
 import projectsData from "../../projectsData";
 
-import { Link } from "react-router-dom";
-
-import NavigationButton from "../../components/NavigationButton/NavigationButton";
-
+import ProjectCardHome from "../../components/ProjectCardHome/ProjectCardHome";
 import Banner from "../../components/Banner/Banner";
 import ContactForm from "../../components/ContactForm/ContactForm";
+import NavigationButton from "../../components/NavigationButton/NavigationButton";
+
+// social icons
+import { FaLinkedinIn, FaGithub } from "react-icons/fa";
+
+// contact icons
+import { FaRegEnvelope, FaBehance } from "react-icons/fa";
+import { FiPhone } from "react-icons/fi";
+import { TbLocation } from "react-icons/tb";
 
 const images = [
   "/assets/bannerImages/banner1.webp",
@@ -27,24 +32,22 @@ function Home() {
   return (
     <div className="home">
       <section className="home-intro">
-        <h1>Ali Barış Gültekin</h1>
-        <h2>Frontend Dev & UI/UX Designer</h2>
-        <p>
-          I specialize in creating seamless and engaging digital experiences. By
-          blending technical expertise with a creative touch, I transform
-          complex ideas into user-friendly, interactive websites. Let's work
-          together to bring your vision to life and make the web a more
-          beautiful place, one line of code at a time.
-        </p>
-        <NavigationButton link={"contact"} text={"Contact Me"} />
+        <div className="home-intro-box">
+          <h1>Ali Barış Gültekin</h1>
+          <h2>Developer & Designer</h2>
+          <p>
+            I combine technical expertise with a creative flair to transform
+            complex ideas into user-friendly, interactive products. Let’s
+            collaborate to bring your vision to life and craft seamless and
+            engaging digital experiences.
+          </p>
+        </div>
       </section>
 
       <section className="home-recentProjects">
         <div className="home-header">
           <h1>Recent Work</h1>
-          <Link to="/projects" className="button home-convertButton">
-            See All
-          </Link>
+          <NavigationButton link={"projects"} text={"See All"} />
         </div>
         <div className="home-projectsList">
           {featuredProjects.map((project) => (
@@ -59,15 +62,49 @@ function Home() {
       </div>
 
       <section className="home-contactForm">
-        <h1>Contact Me</h1>
-        <ContactForm />
-      </section>
+        <div className="home-header">
+          <h1>Contact Me</h1>
+          <NavigationButton link={"contact"} text={"More Info"} />
+        </div>
+        <div className="home-contactFormContent">
+          <div className="home-contactForm-wrapper">
+            <ContactForm />
+          </div>
 
-      <img
-        src="/assets/Ellipses.png"
-        alt="gradient"
-        className="background-gradient"
-      />
+          <div className="home-contactLinks">
+            <h2>Reach out to me</h2>
+
+            <div className="home-contactLinks-content">
+              <div className="home-socialIcons">
+                <div className="iconBox">
+                  <FaLinkedinIn />
+                </div>
+                <div className="iconBox">
+                  <FaGithub />
+                </div>
+                <div className="iconBox">
+                  <FaBehance />
+                </div>
+              </div>
+
+              <div className="home-contactInfo">
+                <div className="contactInfoBox">
+                  <FaRegEnvelope />
+                  <p>alibarisgultekin@gmail.com</p>
+                </div>
+                <div className="contactInfoBox">
+                  <FiPhone />
+                  <p>+90 (534) 396 11 60</p>
+                </div>
+                <div className="contactInfoBox">
+                  <TbLocation />
+                  <p>İzmir, Türkiye</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

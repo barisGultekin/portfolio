@@ -8,7 +8,7 @@ function BackButton() {
 
   return (
     <div onClick={() => navigate(-1)} className="backButton">
-      <FaChevronLeft /> Back
+      <FaChevronLeft /> <p>Back</p>
     </div>
   );
 }

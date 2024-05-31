@@ -3,6 +3,11 @@ import './Collaborator.css'
 
 import collaboratorData from "../../../../collaboratorData";
 
+import { HiOutlineExternalLink } from "react-icons/hi";
+
+import { Link } from "react-router-dom";
+
+
 function Collaborator({ collaboratorKey }) {
   const collaborator = collaboratorData.find(
     (data) => data.key === collaboratorKey
@@ -13,10 +18,11 @@ function Collaborator({ collaboratorKey }) {
   }
 
   return (
-    <div className="collaborator">
+    <Link to={collaborator.link} target="_blank" rel="noopener noreferrer" className="collaborator">
       <img src={collaborator.imgURL} alt={collaborator.name} />
       <p>{collaborator.name}</p>
-    </div>
+      <span className="tooltip">{collaborator.title} <HiOutlineExternalLink /> </span>
+    </Link>
   );
 }
 

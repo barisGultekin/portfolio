@@ -3,19 +3,36 @@
     align-items: center;
     justify-content: left;
 
-    background-color: #2d2d2d;
     padding: .5em 1em;
-    border-radius: 4em;
+    border-radius: 12px;
+
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+
+    transition: transform 0.3s ease;
+}
+
+.searchBar:hover {
+    transform: scale(1.01);
+    background: rgba(0, 0, 0, 0.4);
 }
 
 .searchBar-icon {
-    width: 2.4em;
-    height: 2.4em;
-    border-radius: 2em;
+    width: 2.6em;
+    height: 2.6em;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #454545;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.focused {
+    color: var(--main-color);
+    background-color: var(--main-color-transparent);
 }
 
 .searchBar-textField {
