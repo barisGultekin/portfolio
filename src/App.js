@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Layout from './components/Layout/Layout';
 import ScrollToTop from './components/ScrollToTop';
+import ScrollToTopButton from './components/ScrollToTopButton/ScrollToTopButton';
 
 import Home from './pages/Home/Home';
 import Contact from './pages/Contact/Contact';
@@ -19,6 +20,7 @@ function App() {
     <div className="App">
       <Router>
         <ScrollToTop />
+        <ScrollToTopButton />
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />

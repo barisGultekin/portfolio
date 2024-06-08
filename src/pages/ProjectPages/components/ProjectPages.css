@@ -15,12 +15,70 @@
     padding: 3.2em;
     border-radius: 12px;
 
-    background: rgba(0, 0, 0, 0.3);
+    background: var(--glass-background);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
+
+.pp-header-top {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.pp-demoLink {
+    width: 2em;
+    height: 2em;
+
+    border-radius: 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--main-color);
+    background-color: var(--main-color-transparent);
+
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pp-demoLink:hover  {
+    color: var(--background-color);
+    background-color: var(--main-color);
+}
+
+.pp-demoLink .tooltip {
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+
+    visibility: hidden;
+    width: fit-content;
+    white-space: nowrap;
+    
+    text-align: center;
+    color: var(--ivory);
+    padding: 1em;
+    border-radius: 8px;
+  
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1002;
+    margin-left: 12em;
+  
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .pp-demoLink:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
 
 .pp h2 {
     font-size: 1.4em;
@@ -37,7 +95,7 @@
 }
 
 .pp-content {
-    margin: 2em 0 6em 0;
+    margin: 2em 0 2em 0;
     transition: height 0.5s ease;
     overflow: hidden;
 }
@@ -53,7 +111,10 @@
     display: flex;
     align-items: center;
     gap: 2.4em;
-    margin-bottom: 1em;
+    margin-top: 1.6em;
+    height: 3em;
+
+    overflow: visible;
 }
 
 /* SECTION SELECTOR */
@@ -102,6 +163,10 @@
     justify-content: center;
 
     margin: 2em 0;
+}
+
+.reduceImgSize {
+    width: 60% !important;
 }
 
 .mobileSS {
@@ -174,10 +239,14 @@
         margin-left: 1em;
         padding: 1.2em;
 
-        
+
     }
 
-    .pp h1, .pp h2, .pp h3, .pp h4, .pp p {
+    .pp h1,
+    .pp h2,
+    .pp h3,
+    .pp h4,
+    .pp p {
         text-align: left;
     }
 

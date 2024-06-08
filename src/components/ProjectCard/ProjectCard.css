@@ -1,7 +1,7 @@
 .pc {
     padding: 18px;
 
-    background: rgba(0, 0, 0, 0.3);
+    background: var(--glass-background);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
@@ -38,12 +38,26 @@
     cursor: pointer;
 }
 
+.pc-imageContainer {
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.pc:hover .pc-image {
+    transform: scale(1.05);
+    transform-origin: 50% 50%;
+  }
+
 .pc-image {
     width: 100%;
     border-radius: 8px;
     aspect-ratio: 2/1;
 
     object-fit: cover;
+
+    display: block;
+  transition: transform .4s;
 }
 
 .pc-tags {

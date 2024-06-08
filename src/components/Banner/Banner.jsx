@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
-import './Banner.css';
+import React, { useState, useRef, useEffect } from "react";
+import "./Banner.css";
 
 const Banner = ({ images }) => {
   const [speed, setSpeed] = useState(50);
@@ -49,13 +49,15 @@ const Banner = ({ images }) => {
       >
         <div className="banner-inner">
           {images.concat(images).map((image, index) => (
-            <img
-              key={index}
-              src={image}
-              alt={`Banner ${index}`}
-              onClick={() => handleImageClick(image)}
-              className="banner-image"
-            />
+            <div className="banner-imageContainer">
+              <img
+                key={index}
+                src={image}
+                alt={`Banner ${index}`}
+                onClick={() => handleImageClick(image)}
+                className="banner-image"
+              />
+            </div>
           ))}
         </div>
       </div>

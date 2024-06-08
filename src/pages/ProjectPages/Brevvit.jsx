@@ -20,13 +20,48 @@ function Brevvit() {
       case "overview":
         return (
           <div>
-            <p>Brevvit has X main functions.</p>
             <br></br>
-            <h2>User Profile</h2>
-            <p>Sporty people</p>
+            <h2>Overview</h2>
+            <p>
+              The brevvit application is designed to integrate seamlessly with a
+              series of kitchen devices, enabling users to efficiently prepare
+              beverages like tea, milk, and smoothies. Developed in
+              collaboration between computer engineering and industrial design
+              disciplines, brevvit harnesses mobile technology and user-centered
+              design to enhance the everyday kitchen experience.
+            </p>
+            <br></br>
+            <h2>Key Functions</h2>
+            <br></br>
+            <b>User Profile Customization:</b>
+            <p>
+              Tailored for sporty individuals, Brevvit allows users to input and
+              track health-related goals directly from their mobile device.
+            </p>
+            <br></br>
+            <b>Dynamic Recipe Database:</b>
+            <p>
+              Equipped with a comprehensive database, the app offers a variety
+              of recipes that provide detailed nutritional information,
+              ingredients needed, and cooking methods. Bluetooth Device
+            </p>
+            <br></br>
+            <b>Connectivity:</b>
+            <p>
+              Users can connect to their kitchen tools via Bluetooth, enabling
+              them to automate the beverage-making process according to their
+              preferences.
+            </p>
             <br></br>
             <h2>Design Process</h2>
-            <p>Look and feel of the app</p>
+            <p>
+              The design of Brevvit focuses on a clean and intuitive user
+              interface that reflects a modern and streamlined look, appealing
+              particularly to active, health-conscious individuals. The
+              collaborative effort between engineering and design ensured that
+              both functional and aesthetic requirements were met, creating a
+              user-friendly and visually appealing application.
+            </p>
           </div>
         );
       case "mobile":
@@ -34,9 +69,14 @@ function Brevvit() {
           <div>
             <h2>Mobile App</h2>
             <p>
-              Mobile app of brevvit allows users to connect to their kitchen
-              tools via bluetooth to make them work in certain ways that would
-              allow them to make their tea, smoothie or milk.
+              Voluptate officia fugiat commodo non incididunt incididunt id. Ut
+              officia mollit minim eu aliqua eu ad est nostrud ullamco
+              exercitation et veniam veniam. Magna in nulla fugiat adipisicing
+              aute aliqua proident aute ex esse consequat pariatur sunt ut.
+              Nulla et ipsum id cupidatat nulla. Est velit nisi enim veniam ex
+              aliqua aliquip pariatur. Laboris sit dolore aliqua pariatur enim
+              esse non sunt consectetur. Reprehenderit irure magna magna
+              occaecat.
             </p>
             <div className="imgWrapper">
               <img
@@ -45,18 +85,25 @@ function Brevvit() {
                 alt="brevvitux-gif"
               />
             </div>
+            <h2>Remote Control and Customization</h2>
+            ADD DEVICE
+            <p>
+              Remote Control and Customization: The app allows users to operate
+              their kitchen devices remotely, set up custom drink preparations,
+              and save their favorite configurations.
+            </p>
+            <h2>Real-Time Monitoring</h2>
+            RECIPES & PREP SCREEN
+            <p>
+              Users can track the progress of their drinks in real time, with
+              notifications to alert them when their beverage is ready. Options
+              to keep the drink warm provide added convenience.
+            </p>
             <p>
               The application contains a database of recipes that has
               ingredients, cooking techniques and nutrients. Users can browse
               recipes to meet their health goals or create custom configurations
               for their drinks.
-            </p>
-            <br></br>
-            <h3>Preperation Process</h3>
-            <p>
-              User's can see the progress of their drink in real time and be
-              notified when their drink is ready. Also they have the option to
-              keep it warm before they are able to pick it up.
             </p>
           </div>
         );
@@ -65,9 +112,13 @@ function Brevvit() {
           <div>
             <h2>On-device Screens</h2>
             <p>
-              Each brevvit product has their own screens that allow users to
-              directly interact with the product. They can define preset recipes
-              from the mobile app for future use.
+              Each kitchen device features its own interactive display that
+              syncs with the mobile app, allowing users to select or customize
+              recipes directly from the device.
+            </p>
+            <p>
+              Devices can store preset configurations, making repeated
+              preparations simpler and faster.
             </p>
             <div className="imgWrapper">
               <img
@@ -76,7 +127,6 @@ function Brevvit() {
                 alt="brevvit-ondevice"
               />
             </div>
-            <p></p>
           </div>
         );
       default:

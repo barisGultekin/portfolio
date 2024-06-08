@@ -5,6 +5,8 @@ import BackButton from "../../components/BackButton/BackButton";
 
 import Collaborator from "./components/Collaborator/Collaborator";
 
+import { FaLink } from "react-icons/fa6";
+
 function Ardeo() {
   const [selectedSection, setSelectedSection] = useState("overview");
   const contentRef = useRef(null);
@@ -24,10 +26,10 @@ function Ardeo() {
           <div>
             <h2>Overview</h2>
             <p>
-              The project kickstarted with the demand coming from the BSH
-              Group's sales team's needs. BSH is the parent company of Bosch and
-              Siemens. They figured that the sales process in their retailers
-              are not managed with CRM softwares.
+              The project began in response to the needs identified by the BSH
+              Group's sales team. BSH, the parent company of Bosch and Siemens,
+              recognized that their retail sales processes were not effectively
+              managed with existing CRM software solutions.
             </p>
             <div className="imgWrapper">
               <img
@@ -37,13 +39,15 @@ function Ardeo() {
               />
             </div>
             <p>
-              So I worked with their sales team and designed a sales software
-              spesific for retailers. Allowing the salespeople working at the
-              retail to track their leads, remember the customers and give them
-              the best offer. The whole process generates data that can be used
-              by the BSH group's or the retailer companies' executives. I also
-              designed and developed interactive statistics tools that fits
-              right into their processes.
+              In collaboration with their sales team, I designed a sales
+              software tailored specifically for retailers. This solution
+              enables sales personnel at the retail level to efficiently track
+              leads, recall customer details, and provide optimal offers. The
+              system not only streamlines the sales process but also generates
+              valuable data that can be utilized by executives at BSH Group or
+              the retailer companies. Additionally, I developed interactive
+              statistical tools that integrate seamlessly into their operational
+              processes.
             </p>
           </div>
         );
@@ -183,10 +187,57 @@ function Ardeo() {
         return (
           <div>
             <h2>Front End Development</h2>
-            <h3>Layout</h3>
-            <h3>Routing</h3>
+            <br></br>
+            <h3>Component Library</h3>
+            <p>
+              Collaborated with a fellow developer to implement the visual
+              design of the application. We initiated the process by
+              constructing a component library, employing modular design
+              principles to ensure reusability and scalability. This library
+              served as the foundational UI toolkit across the application.
+            </p>
+            <div className="imgWrapper">
+              <img
+                className="pp-img"
+                src="/assets/projectAssets/Ardeo/ardeoLibrary.webp"
+                alt="ardeo-homepage"
+              />
+            </div>
+            <h3>Structure</h3>
+            <p>
+              Incorporated the React Router library to manage navigation across
+              the application, coupled with manual state management techniques.
+              Opted against using Redux to maintain simplicity and control over
+              state transitions and data flow.
+            </p>
             <h3>Interactions</h3>
+            <p>
+              To enhance user engagement, it was essential to integrate dynamic
+              feedback mechanisms. Utilized Toaster.js for generating responsive
+              notifications and alerts that inform users of system interactions,
+              ensuring an intuitive feedback loop.
+            </p>
+            <p>
+              The application also features numerous micro-interactions, such as
+              animations and conditional styling, to provide a seamless and
+              responsive user experience.
+            </p>
             <h3>Data Analytics Tools</h3>
+            <p>
+              Developed the data visualization tools with the Chart.js library.
+              This involved designing and implementing interactive charts and
+              graphs that allow users to parse through complex datasets
+              effortlessly. Special focus was placed on optimizing the
+              performance of these visualizations to handle large volumes of
+              data without compromising on interactivity or speed.
+            </p>
+            <div className="imgWrapper">
+              <img
+                className="pp-img"
+                src="/assets/projectAssets/Ardeo/ardeoStatistics.webp"
+                alt="ardeo-homepage"
+              />
+            </div>
           </div>
         );
       default:
@@ -199,8 +250,19 @@ function Ardeo() {
       <div className="pp">
         <div className="pp-header">
           <BackButton />
+          <div className="pp-header-top">
+            <h1>Ardeo</h1>
+            <a
+              href="https://ardeo.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="pp-demoLink"
+            >
+              <FaLink />
+              <span className="tooltip">Visit Website</span>
+            </a>
+          </div>
 
-          <h1>Ardeo</h1>
           <p className="pp-mainDesc">
             Ardeo DDR (Data Driven Retail) is a web application designed to
             streamline lead tracking and enhance sales management tools for

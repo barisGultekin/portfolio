@@ -1,5 +1,5 @@
 .navbar {
-  padding: 2em 0;
+  padding: 2em 0 0 0;
   position: fixed;
 
   top: 0;
@@ -20,8 +20,8 @@
 }
 
 .navbar-box {
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 64px;
+  background: var(--glass-background);
+  border-radius: 12px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(80px);
   -webkit-backdrop-filter: blur(80px);

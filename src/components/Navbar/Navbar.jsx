@@ -7,7 +7,7 @@ function Navbar() {
   const [lastScrollY, setLastScrollY] = useState(0);
 
   const controlNavbar = () => {
-    if (window.scrollY > lastScrollY) {
+    if (window.scrollY > lastScrollY && window.scrollY > 0) {
       setShow(false);
     } else {
       setShow(true);

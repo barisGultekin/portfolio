@@ -7,7 +7,6 @@ import { HiOutlineExternalLink } from "react-icons/hi";
 
 import { Link } from "react-router-dom";
 
-
 function Collaborator({ collaboratorKey }) {
   const collaborator = collaboratorData.find(
     (data) => data.key === collaboratorKey

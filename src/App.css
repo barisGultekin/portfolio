@@ -1,11 +1,12 @@
 :root {
-  --background-color: #0f1818;
+  --background-color: #111414;
   --background-color-light: #212121;
   --main-color: #BEFF6C;
   --main-color-transparent: rgba(190, 255, 108, 0.2);
   --main-light-gray: #A7A7A7;
   --main-dark-transparent: rgba(37, 80, 173, 0.6);
   --ivory: #cfcfc4;
+  --glass-background: rgba(16, 16, 16, 0.5);
 }
 
 body,
@@ -19,6 +20,14 @@ html {
 
   background-color: var(--background-color);
   
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
 }
 
 .bg {
@@ -82,6 +91,7 @@ h3 {
 
 p {
   cursor: default;
+  font-weight: 500;
 }
 
 @keyframes fadeIn {
@@ -93,6 +103,18 @@ p {
   to {
       opacity: 1;
       transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+      transform: translateY(0);
+  }
+
+  to {
+      opacity: 0;
+      transform: translateY(20px);
   }
 }
 
