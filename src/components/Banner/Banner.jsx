@@ -1,10 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./Banner.css";
 
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
+import { IoClose } from "react-icons/io5";
+
 const Banner = ({ images }) => {
-  const [speed, setSpeed] = useState(50);
+  const [speed, setSpeed] = useState(10);
   const [showPopup, setShowPopup] = useState(false);
-  const [popupImage, setPopupImage] = useState(null);
+  const [popupImageIndex, setPopupImageIndex] = useState(null);
   const scrollRef = useRef(null);
 
   useEffect(() => {
@@ -29,15 +32,44 @@ const Banner = ({ images }) => {
     setSpeed(10); // Restores the scroll speed when hover ends
   };
 
-  const handleImageClick = (image) => {
-    setPopupImage(image);
+  const handleImageClick = (index) => {
+    setPopupImageIndex(index);
     setShowPopup(true);
   };
 
   const handleClosePopup = () => {
     setShowPopup(false);
-    setPopupImage(null);
+    setPopupImageIndex(null);
   };
+
+  const handleNextImage = () => {
+    setPopupImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  const handlePrevImage = () => {
+    setPopupImageIndex(
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+    );
+  };
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (showPopup) {
+        if (event.key === "ArrowRight") {
+          handleNextImage();
+        } else if (event.key === "ArrowLeft") {
+          handlePrevImage();
+        } else if (event.key === "Escape") {
+          handleClosePopup();
+        }
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [showPopup]);
 
   return (
     <div>
@@ -49,24 +81,49 @@ const Banner = ({ images }) => {
       >
         <div className="banner-inner">
           {images.concat(images).map((image, index) => (
-            <div className="banner-imageContainer">
+            <div className="banner-imageContainer" key={index}>
               <img
-                key={index}
-                src={image}
+                src={image.src}
                 alt={`Banner ${index}`}
-                onClick={() => handleImageClick(image)}
+                onClick={() => handleImageClick(index % images.length)}
                 className="banner-image"
               />
+              <div className="banner-tag-container">{image.title}</div>
             </div>
           ))}
         </div>
       </div>
       {showPopup && (
         <div className="popup" onClick={handleClosePopup}>
-          <img src={popupImage} alt="Popup" className="popup-image" />
+          <img
+            src={images[popupImageIndex].src}
+            alt="Popup"
+            className="popup-image"
+          />
           <button className="close-button" onClick={handleClosePopup}>
-            &times;
+            <IoClose />
           </button>
+          <button
+            className="prev-button"
+            onClick={(e) => {
+              e.stopPropagation();
+              handlePrevImage();
+            }}
+          >
+            <FaChevronLeft />
+          </button>
+          <button
+            className="next-button"
+            onClick={(e) => {
+              e.stopPropagation();
+              handleNextImage();
+            }}
+          >
+            <FaChevronRight />
+          </button>
+          <div className="popup-tag-container">
+            {images[popupImageIndex].title}
+          </div>
         </div>
       )}
     </div>

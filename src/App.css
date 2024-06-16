@@ -1,12 +1,12 @@
 :root {
   --background-color: #111414;
   --background-color-light: #212121;
-  --main-color: #BEFF6C;
-  --main-color-transparent: rgba(190, 255, 108, 0.2);
+  --main-color: #A6D38A;
+  --main-color-transparent: rgba(166, 211, 138, 0.2);
   --main-light-gray: #A7A7A7;
   --main-dark-transparent: rgba(37, 80, 173, 0.6);
   --ivory: #cfcfc4;
-  --glass-background: rgba(16, 16, 16, 0.5);
+  --glass-background: rgba(32, 32, 32, 0.4);
 }
 
 body,

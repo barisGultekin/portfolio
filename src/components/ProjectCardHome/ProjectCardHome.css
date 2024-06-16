@@ -9,7 +9,7 @@
 
     border-radius: 16px;
 
-    transition: transform 0.3s ease, background 0.3s ease;
+    transition: background 0.3s ease;
 
     text-decoration: none;
     color: #fff;
@@ -21,7 +21,6 @@
 }
 
 .pch:hover {
-    transform: scale(1.02);
     background: rgba(0, 0, 0, 0.5);
 }
 

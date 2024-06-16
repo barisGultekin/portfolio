@@ -14,7 +14,10 @@ import Ardeo from './pages/ProjectPages/Ardeo';
 import Wire from './pages/ProjectPages/Wire';
 import Brevvit from './pages/ProjectPages/Brevvit';
 import Moin from './pages/ProjectPages/Moin';
-
+import ARFlip from './pages/ProjectPages/ARFlip';
+import EnvSoc from './pages/ProjectPages/EnvSoc';
+import MunAtk from './pages/ProjectPages/MunAtk';
+import Sailing from './pages/ProjectPages/Sailing';
 function App() {
   return (
     <div className="App">
@@ -30,6 +33,10 @@ function App() {
             <Route path="projects/wire" element={<Wire />} />
             <Route path="projects/brevvit" element={<Brevvit />} />
             <Route path="projects/moin" element={<Moin />} />
+            <Route path="projects/arflip" element={<ARFlip />} />
+            <Route path="projects/iztechsailing" element={<Sailing />} />
+            <Route path="projects/munatk" element={<MunAtk />} />
+            <Route path="projects/envsoc" element={<EnvSoc />} />
           </Route>
         </Routes>
       </Router>

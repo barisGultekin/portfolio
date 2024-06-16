@@ -17,14 +17,14 @@ import { FiPhone } from "react-icons/fi";
 import { TbLocation } from "react-icons/tb";
 
 const images = [
-  "/assets/bannerImages/banner1.webp",
-  "/assets/bannerImages/banner2.webp",
-  "/assets/bannerImages/banner3.webp",
-  "/assets/bannerImages/banner4.webp",
-  "/assets/bannerImages/banner5.webp",
-  "/assets/bannerImages/banner6.webp",
-  "/assets/bannerImages/banner7.webp",
+  { src: "/assets/bannerImages/banner1.webp", title: "Natural Produce Marketplace" },
+  { src: "/assets/bannerImages/banner2.webp", title: "Digital Wallet & Finance Manager" },
+  { src: "/assets/bannerImages/banner3.webp", title: "Streetwear eCommerce Shop" },
+  { src: "/assets/bannerImages/banner4.webp", title: "Marina & Boating Guide" },
+  { src: "/assets/bannerImages/banner5.webp", title: "Golf Course Navigator" },
+  { src: "/assets/bannerImages/banner6.webp", title: "Cycling Route Planner" },
 ];
+
 
 function Home() {
   const featuredProjects = projectsData.filter((project) => project.featured);
