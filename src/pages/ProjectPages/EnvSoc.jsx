@@ -55,7 +55,7 @@ function EnvSoc() {
       <div className="pp">
         <div className="pp-header">
           <BackButton className="pp-backButton" />
-          <h1>Title</h1>
+          <h1>IZTECH Environment Society</h1>
           <p>
             Excepteur esse occaecat ullamco velit amet voluptate sit est dolor
             cupidatat non reprehenderit. Ea culpa irure esse incididunt irure

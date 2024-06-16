@@ -23,48 +23,43 @@ function ARFlip() {
         return (
           <div>
             <h2>Overview</h2>
-            <p>
-              Nisi tempor tempor ipsum enim ullamco. Culpa ea dolor qui
-              excepteur eiusmod labore irure eiusmod cillum id. Sint occaecat
-              amet nisi sunt duis ut eu laborum deserunt et labore. Sunt
-              cupidatat est sit voluptate aute minim fugiat occaecat.
-            </p>
-          </div>
-        );
-      case "design":
-        return (
-          <div>
-            <h2>Overview</h2>
-            <p>
-              Nisi tempor tempor ipsum enim ullamco. Culpa ea dolor qui
-              excepteur eiusmod labore irure eiusmod cillum id. Sint occaecat
-              amet nisi sunt duis ut eu laborum deserunt et labore. Sunt
-              cupidatat est sit voluptate aute minim fugiat occaecat.
-            </p>
+            <p>HUDs, and the project</p>
+            <div className="imgWrapper">
+              <img
+                className="pp-img"
+                src="/assets/projectAssets/ARFlip/arflip-ss1.webp"
+                alt="ardeo-homepage"
+              />
+            </div>
+            <p>Device</p>
           </div>
         );
       case "uiux":
         return (
           <div>
-            <h2>Overview</h2>
+            <h2>User Experience</h2>
             <p>
               Nisi tempor tempor ipsum enim ullamco. Culpa ea dolor qui
               excepteur eiusmod labore irure eiusmod cillum id. Sint occaecat
               amet nisi sunt duis ut eu laborum deserunt et labore. Sunt
               cupidatat est sit voluptate aute minim fugiat occaecat.
             </p>
+            <h2>Components</h2>
+            <h2>Alerts</h2>
+            <p>notification</p>
+            <p>warnings</p>
+            <h2>Interactions</h2>
+            <p>gestures</p>
+            <p>voice feedback</p>
           </div>
         );
       case "prototype":
         return (
           <div>
-            <h2>Overview</h2>
-            <p>
-              Nisi tempor tempor ipsum enim ullamco. Culpa ea dolor qui
-              excepteur eiusmod labore irure eiusmod cillum id. Sint occaecat
-              amet nisi sunt duis ut eu laborum deserunt et labore. Sunt
-              cupidatat est sit voluptate aute minim fugiat occaecat.
-            </p>
+            <h2>3D Design</h2>
+            <p></p>
+            <h2>Manufacturing</h2>
+            <h2>Board & Sensors</h2>
           </div>
         );
       default:
@@ -79,16 +74,19 @@ function ARFlip() {
           <BackButton className="pp-backButton" />
           <h1>AR Flip</h1>
           <p>
-            A mountable car accessory that offers a head-up display by
-            projecting critical driving information onto its glass screen. It
-            includes gesture controls, allowing drivers to interact with the
-            display hands-free, ensuring a safer and more seamless driving
-            experience.
+            Semi-finalist at the 2020 Big Bang Startup Challenge, ARFlip is A
+            mountable car accessory that offers a head-up display by projecting
+            critical driving information onto its glass screen. It includes
+            gesture controls, allowing drivers to interact with the display
+            hands-free, ensuring a safer and more seamless driving experience.
           </p>
 
           <h4>COLLABORATORS</h4>
           <div className="collaborator-list">
-            <Collaborator collaboratorKey={"ozan"} />
+            <Collaborator
+              collaboratorKey={"ozan"}
+              colloboratorPart={"Embedded Engineer"}
+            />
           </div>
 
           <h4>SECTIONS</h4>
@@ -109,15 +107,6 @@ function ARFlip() {
               onClick={() => setSelectedSection("uiux")}
             >
               UI/UX Design
-            </button>
-
-            <button
-              className={`section-button ${
-                selectedSection === "design" ? "active" : ""
-              }`}
-              onClick={() => setSelectedSection("design")}
-            >
-              3D Design
             </button>
 
             <button

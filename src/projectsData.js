@@ -46,37 +46,19 @@ const projectsData = [
   },
   {
     id: 6,
-    slug: 'arfkitchen',
-    title: 'ARF Kitchen',
+    slug: 'iztechsailing',
+    title: 'IZTECH Sailing',
     description: 'This is the first sample project description.',
-    imageUrl: 'https://via.placeholder.com/150',
-    tags: ['3D Design', 'Branding'],
+    imageUrl: '/assets/projectAssets/Sailing/sailingCover.webp',
+    tags: ['Graphic Design', 'Branding'],
     featured: false
   },
   {
     id: 7,
-    slug: 'iztechsailing',
-    title: 'IZTECH Sailing',
-    description: 'This is the first sample project description.',
-    imageUrl: 'https://via.placeholder.com/150',
-    tags: ['Graphic Design', 'Branding'],
-    featured: false
-  },
-  {
-    id: 8,
     slug: 'envsoc',
     title: 'ENVSOC',
     description: 'This is the first sample project description.',
-    imageUrl: 'https://via.placeholder.com/150',
-    tags: ['Graphic Design', 'Branding'],
-    featured: false
-  },
-  {
-    id: 9,
-    slug: 'munatk',
-    title: 'MUNATK',
-    description: 'This is the first sample project description.',
-    imageUrl: 'https://via.placeholder.com/150',
+    imageUrl: '/assets/projectAssets/EnvSoc/envsocCover.webp',
     tags: ['Graphic Design', 'Branding'],
     featured: false
   },
