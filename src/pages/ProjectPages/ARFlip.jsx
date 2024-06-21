@@ -40,17 +40,21 @@ function ARFlip() {
             <h2>User Experience</h2>
             <p>
               Nisi tempor tempor ipsum enim ullamco. Culpa ea dolor qui
-              excepteur eiusmod labore irure eiusmod cillum id. Sint occaecat
-              amet nisi sunt duis ut eu laborum deserunt et labore. Sunt
-              cupidatat est sit voluptate aute minim fugiat occaecat.
+              excepteur.
             </p>
             <h2>Components</h2>
+            <div className="imgWrapper">
+              <img
+                className="pp-img"
+                src="/assets/projectAssets/ARFlip/arflipComponents.webp"
+                alt="ardeo-homepage"
+              />
+            </div>
             <h2>Alerts</h2>
             <p>notification</p>
             <p>warnings</p>
             <h2>Interactions</h2>
             <p>gestures</p>
-            <p>voice feedback</p>
           </div>
         );
       case "prototype":
@@ -58,7 +62,21 @@ function ARFlip() {
           <div>
             <h2>3D Design</h2>
             <p></p>
+            <div className="imgWrapper">
+              <img
+                className="pp-img"
+                src="/assets/projectAssets/ARFlip/arflipVersions.webp"
+                alt="ardeo-homepage"
+              />
+            </div>
             <h2>Manufacturing</h2>
+            <div className="imgWrapper">
+              <img
+                className="pp-img"
+                src="/assets/projectAssets/ARFlip/arflipCAD.webp"
+                alt="ardeo-homepage"
+              />
+            </div>
             <h2>Board & Sensors</h2>
           </div>
         );
