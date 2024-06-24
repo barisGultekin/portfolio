@@ -35,7 +35,7 @@ function ARFlip() {
             <div className="imgWrapper">
               <img
                 className="pp-img"
-                src="/assets/projectAssets/ARFlip/arflip-ss1.webp"
+                src={`${process.env.PUBLIC_URL}/assets/projectAssets/ARFlip/arflip-ss1.webp`}
                 alt="arflip-screenshot"
               />
             </div>
@@ -47,7 +47,7 @@ function ARFlip() {
             <div className="imgWrapper">
               <img
                 className="pp-img"
-                src="/assets/projectAssets/ARFlip/arflip-device.webp"
+                src={`${process.env.PUBLIC_URL}/assets/projectAssets/ARFlip/arflip-device.webp`}
                 alt="arflip-screenshot"
               />
             </div>
@@ -65,7 +65,7 @@ function ARFlip() {
             <div className="imgWrapper">
               <img
                 className="pp-img"
-                src="/assets/projectAssets/ARFlip/arflip-components.webp"
+                src={`${process.env.PUBLIC_URL}/assets/projectAssets/ARFlip/arflip-components.webp`}
                 alt="arflip-components"
               />
             </div>
@@ -77,7 +77,7 @@ function ARFlip() {
             <div className="imgWrapper">
               <img
                 className="pp-img"
-                src="/assets/projectAssets/ARFlip/arflip-notification.gif"
+                src={`${process.env.PUBLIC_URL}/assets/projectAssets/ARFlip/arflip-notification.webp`}
                 alt="arflip-gif"
               />
             </div>
@@ -96,7 +96,7 @@ function ARFlip() {
             <div className="imgWrapper">
               <img
                 className="pp-img"
-                src="/assets/projectAssets/ARFlip/arflip-interactions.webp"
+                src={`${process.env.PUBLIC_URL}/assets/projectAssets/ARFlip/arflip-interactions.webp`}
                 alt="arflip-mediaIndicator"
               />
             </div>
@@ -113,7 +113,7 @@ function ARFlip() {
             <div className="imgWrapper">
               <img
                 className="pp-img"
-                src="/assets/projectAssets/ARFlip/arflipVersions.webp"
+                src={`${process.env.PUBLIC_URL}/assets/projectAssets/ARFlip/arflipVersions.webp`}
                 alt="arflip-versions"
               />
             </div>
@@ -125,7 +125,7 @@ function ARFlip() {
             <div className="imgWrapper">
               <img
                 className="pp-img"
-                src="/assets/projectAssets/ARFlip/arflipCAD.webp"
+                src={`${process.env.PUBLIC_URL}/assets/projectAssets/ARFlip/arflipCAD.webp`}
                 alt="arflip-cad"
               />
             </div>

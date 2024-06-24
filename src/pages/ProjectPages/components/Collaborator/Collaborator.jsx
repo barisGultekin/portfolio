@@ -16,11 +16,13 @@ function Collaborator({ collaboratorKey, colloboratorPart }) {
     return <div>Collaborator not found</div>;
   }
 
+  const displayTitle = colloboratorPart || collaborator.title;
+
   return (
     <Link to={collaborator.link} target="_blank" rel="noopener noreferrer" className="collaborator">
       <img src={collaborator.imgURL} alt={collaborator.name} />
       <p>{collaborator.name}</p>
-      <span className="tooltip">{colloboratorPart} <HiOutlineExternalLink /> </span>
+      <span className="tooltip">{displayTitle} <HiOutlineExternalLink /> </span>
     </Link>
   );
 }

@@ -9,13 +9,12 @@ import { PiFrameCorners } from "react-icons/pi";
 const DownloadPreviewButton = ({ title, keyword }) => {
   const [showPopup, setShowPopup] = useState(false);
 
-  const imgUrl = "/" + keyword + ".webp";
+  const imgUrl = `${process.env.PUBLIC_URL}` + "/" + keyword + ".webp";
 
   const handleClosePopup = () => {
     setShowPopup(false);
   };
 
-  console.log(imgUrl);
 
   return (
     <div className="DownloadPreviewButton">
@@ -42,11 +41,12 @@ const DownloadPreviewButton = ({ title, keyword }) => {
         <div className="popupDoc" onClick={handleClosePopup}>
           <img src={imgUrl} alt="Popup" className="popup-image" />
 
-          <button className="close-button" onClick={handleClosePopup}>
+          <div className="doc-close-button" onClick={handleClosePopup}>
             <IoClose />
-          </button>
+          </div>
 
-          <a className="popup-downloadButton" href="/resume.pdf" download>
+          <a className="popup-downloadButton" href={`${process.env.PUBLIC_URL}/${keyword}.pdf`} download>
+
             <FaFileDownload />
             Download
           </a>

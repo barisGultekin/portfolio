@@ -32,12 +32,6 @@ const ContactForm = () => {
     e.target.reset();
   };
 
-  useEffect(() => {
-    console.log("Service ID:", process.env.REACT_APP_EMAILJS_SERVICE_ID);
-    console.log("Template ID:", process.env.REACT_APP_EMAILJS_TEMPLATE_ID);
-    console.log("User ID:", process.env.REACT_APP_EMAILJS_USER_ID);
-  }, []);
-
   return (
     <div className="contact-form-wrapper">
       <form ref={form} onSubmit={sendEmail} className="contact-form">

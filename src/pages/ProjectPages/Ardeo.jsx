@@ -34,7 +34,7 @@ function Ardeo() {
             <div className="imgWrapper">
               <img
                 className="pp-img"
-                src="/assets/projectAssets/Ardeo/ardeoOverview.webp"
+                src={`${process.env.PUBLIC_URL}/assets/projectAssets/Ardeo/ardeoOverview.webp`}
                 alt="ardeo-homepage"
               />
             </div>
@@ -69,7 +69,7 @@ function Ardeo() {
             <div className="imgWrapper">
               <img
                 className="pp-img"
-                src="/assets/projectAssets/Ardeo/ardeoBrandLogo.webp"
+                src={`${process.env.PUBLIC_URL}/assets/projectAssets/Ardeo/ardeoBrandLogo.webp`}
                 alt="ardeo-homepage"
               />
             </div>
@@ -83,7 +83,7 @@ function Ardeo() {
             <div className="imgWrapper">
               <img
                 className="pp-img"
-                src="/assets/projectAssets/Ardeo/ardeoBrandDDR.webp"
+                src={`${process.env.PUBLIC_URL}/assets/projectAssets/Ardeo/ardeoBrandDDR.webp`}
                 alt="ardeo-homepage"
               />
             </div>
@@ -118,7 +118,7 @@ function Ardeo() {
             <div className="imgWrapper">
               <img
                 className="pp-img"
-                src="/assets/projectAssets/Ardeo/ardeoUI-1.webp"
+                src={`${process.env.PUBLIC_URL}/assets/projectAssets/Ardeo/ardeoUI-1.webp`}
                 alt="ardeo-homepage"
               />
             </div>
@@ -130,7 +130,7 @@ function Ardeo() {
             <div className="imgWrapper">
               <img
                 className="pp-img"
-                src="/assets/projectAssets/Ardeo/ardeoUI-2.webp"
+                src={`${process.env.PUBLIC_URL}/assets/projectAssets/Ardeo/ardeoUI-2.webp`}
                 alt="ardeo-homepage"
               />
             </div>
@@ -144,7 +144,7 @@ function Ardeo() {
             <div className="imgWrapper">
               <img
                 className="pp-img"
-                src="/assets/projectAssets/Ardeo/ardeoUI-3.webp"
+                src={`${process.env.PUBLIC_URL}/assets/projectAssets/Ardeo/ardeoUI-3.webp`}
                 alt="ardeo-homepage"
               />
             </div>
@@ -163,7 +163,7 @@ function Ardeo() {
             <div className="imgWrapper">
               <img
                 className="pp-img"
-                src="/assets/projectAssets/Ardeo/ardeoUI-4.webp"
+                src={`${process.env.PUBLIC_URL}/assets/projectAssets/Ardeo/ardeoUI-4.webp`}
                 alt="ardeo-homepage"
               />
             </div>
@@ -177,7 +177,7 @@ function Ardeo() {
             <div className="imgWrapper">
               <img
                 className="pp-img"
-                src="/assets/projectAssets/Ardeo/ardeoUI-5.webp"
+                src={`${process.env.PUBLIC_URL}/assets/projectAssets/Ardeo/ardeoUI-5.webp`}
                 alt="ardeo-homepage"
               />
             </div>
@@ -199,7 +199,7 @@ function Ardeo() {
             <div className="imgWrapper">
               <img
                 className="pp-img"
-                src="/assets/projectAssets/Ardeo/ardeoLibrary.webp"
+                src={`${process.env.PUBLIC_URL}/assets/projectAssets/Ardeo/ardeoLibrary.webp`}
                 alt="ardeo-homepage"
               />
             </div>
@@ -234,7 +234,7 @@ function Ardeo() {
             <div className="imgWrapper">
               <img
                 className="pp-img"
-                src="/assets/projectAssets/Ardeo/ardeoStatistics.webp"
+                src={`${process.env.PUBLIC_URL}/assets/projectAssets/Ardeo/ardeoStatistics.webp`}
                 alt="ardeo-homepage"
               />
             </div>

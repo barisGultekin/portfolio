@@ -100,7 +100,7 @@ const Banner = ({ images }) => {
             alt="Popup"
             className="popup-image"
           />
-          <button className="close-button" onClick={handleClosePopup}>
+          <button className="banner-close-button" onClick={handleClosePopup}>
             <IoClose />
           </button>
           <button

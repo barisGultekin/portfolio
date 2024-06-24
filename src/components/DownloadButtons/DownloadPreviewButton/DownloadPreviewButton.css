@@ -40,9 +40,26 @@
     filter: brightness(30%);
 }
 
-.downloadPreviewBox:hover .previewText{
+.downloadPreviewBox:hover .previewText {
     visibility: visible;
     cursor: pointer;
+}
+
+.doc-close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .downloadButton {
@@ -122,4 +139,3 @@
 
     backdrop-filter: blur(10px);
 }
-

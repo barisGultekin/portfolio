@@ -16,20 +16,29 @@ import { TbLocation } from "react-icons/tb";
 
 const images = [
   {
-    src: "/assets/bannerImages/banner1.webp",
+    src: `${process.env.PUBLIC_URL}/assets/bannerImages/banner1.webp`,
     title: "Natural Produce Marketplace",
   },
   {
-    src: "/assets/bannerImages/banner2.webp",
+    src: `${process.env.PUBLIC_URL}/assets/bannerImages/banner2.webp`,
     title: "Digital Wallet & Finance Manager",
   },
   {
-    src: "/assets/bannerImages/banner3.webp",
+    src: `${process.env.PUBLIC_URL}/assets/bannerImages/banner3.webp`,
     title: "Streetwear eCommerce Shop",
   },
-  { src: "/assets/bannerImages/banner4.webp", title: "Marina & Boating Guide" },
-  { src: "/assets/bannerImages/banner5.webp", title: "Golf Course Navigator" },
-  { src: "/assets/bannerImages/banner6.webp", title: "Cycling Route Planner" },
+  {
+    src: `${process.env.PUBLIC_URL}/assets/bannerImages/banner4.webp`,
+    title: "Marina & Boating Guide",
+  },
+  {
+    src: `${process.env.PUBLIC_URL}/assets/bannerImages/banner5.webp`,
+    title: "Golf Course Navigator",
+  },
+  {
+    src: `${process.env.PUBLIC_URL}/assets/bannerImages/banner6.webp`,
+    title: "Cycling Route Planner",
+  },
 ];
 
 function Home() {
@@ -54,9 +63,7 @@ function Home() {
             </p>
           </div>
         </div>
-        <div className="home-swipebutton">
-          
-        </div>
+        <div className="home-swipebutton"></div>
       </section>
 
       <section className="home-recentProjects">
