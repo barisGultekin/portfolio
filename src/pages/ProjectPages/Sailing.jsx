@@ -3,10 +3,8 @@ import "./components/ProjectPages.css";
 
 import BackButton from "../../components/BackButton/BackButton";
 
-import Collaborator from "./components/Collaborator/Collaborator";
-
 function Sailing() {
-  const [selectedSection, setSelectedSection] = useState("overview");
+  const [selectedSection, setSelectedSection] = useState("branding");
   const contentRef = useRef(null);
 
   useEffect(() => {
@@ -19,30 +17,44 @@ function Sailing() {
 
   const renderSectionContent = () => {
     switch (selectedSection) {
-      case "overview":
+      case "branding":
         return (
           <div>
-            <h2>Overview</h2>
-            <p>
-              Nisi tempor tempor ipsum enim ullamco. Culpa ea dolor qui
-              excepteur eiusmod labore irure eiusmod cillum id. Sint occaecat
-              amet nisi sunt duis ut eu laborum deserunt et labore. Sunt
-              cupidatat est sit voluptate aute minim fugiat occaecat.
-            </p>
-            <p>
-              Culpa officia aute nulla id occaecat. Anim non ut sint sunt et
-              officia elit proident. Exercitation commodo aliquip adipisicing ad
-              sit fugiat incididunt sint.
-            </p>
-            <p>
-              Est est magna commodo elit consectetur commodo pariatur culpa do
-              commodo eu. Deserunt veniam reprehenderit dolore adipisicing esse
-              fugiat deserunt veniam aliqua aliquip adipisicing aliquip.
-              Proident tempor commodo aliquip ad eiusmod laborum ex ad. Id nulla
-              labore consectetur pariatur nulla labore nostrud aute Lorem nulla
-              cupidatat adipisicing amet qui. Enim proident sint nulla do
-              ullamco irure commodo quis ut ipsum in nisi.
-            </p>
+            <h2>Branding</h2>
+            <div className="imgWrapper">
+              <img
+                className="pp-img"
+                src="/assets/projectAssets/Sailing/sailing-logos.webp"
+                alt="sailing-logos"
+              />
+            </div>
+            <div className="imgWrapper">
+              <img
+                className="pp-img"
+                src="/assets/projectAssets/Sailing/sailing-poster.webp"
+                alt="sailing-logos"
+              />
+            </div>
+            <div className="imgWrapper">
+              <img
+                className="pp-img"
+                src="/assets/projectAssets/Sailing/sailing-concepts.webp"
+                alt="sailing-logos"
+              />
+            </div>
+          </div>
+        );
+        case "merch":
+        return (
+          <div>
+            <h2>Merchandise</h2>
+            <div className="imgWrapper">
+              <img
+                className="pp-img"
+                src="/assets/projectAssets/Sailing/sailing-concepts.webp"
+                alt="sailing-logos"
+              />
+            </div>
           </div>
         );
       default:
@@ -57,12 +69,9 @@ function Sailing() {
           <BackButton className="pp-backButton" />
           <h1>IZTECH Sailing Club</h1>
           <p>
-            Excepteur esse occaecat ullamco velit amet voluptate sit est dolor
-            cupidatat non reprehenderit. Ea culpa irure esse incididunt irure
-            est mollit excepteur do commodo. Lorem qui nostrud velit fugiat.
-            Cupidatat ut cillum quis minim aliqua ut dolore duis enim nostrud
-            ex. Sunt dolor adipisicing eu nostrud. Ea est irure dolore cupidatat
-            laboris excepteur excepteur ut ullamco.
+            As the president of the Izmir Institute of Technology Sailing Club
+            and the captain of the racing team I designed our brand identity and
+            merchandise.
           </p>
 
           <br />
@@ -71,11 +80,19 @@ function Sailing() {
           <div className="sections">
             <button
               className={`section-button ${
-                selectedSection === "overview" ? "active" : ""
+                selectedSection === "branding" ? "active" : ""
               }`}
-              onClick={() => setSelectedSection("overview")}
+              onClick={() => setSelectedSection("branding")}
             >
-              Overview
+              Branding
+            </button>
+            <button
+              className={`section-button ${
+                selectedSection === "merch" ? "active" : ""
+              }`}
+              onClick={() => setSelectedSection("merch")}
+            >
+              Merchandise
             </button>
           </div>
         </div>

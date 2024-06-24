@@ -23,61 +23,117 @@ function ARFlip() {
         return (
           <div>
             <h2>Overview</h2>
-            <p>HUDs, and the project</p>
+            <p>
+              Main objective of a Head-up Display is to simplify the driving
+              experience and allowing drivers to be more focused on the road.
+            </p>
+            <p>
+              Thus, the design of AR-Flip is lean and simplistic. Only
+              displaying the crucial info relative to the driver at any given
+              time is a critical requirement.
+            </p>
             <div className="imgWrapper">
               <img
                 className="pp-img"
                 src="/assets/projectAssets/ARFlip/arflip-ss1.webp"
-                alt="ardeo-homepage"
+                alt="arflip-screenshot"
               />
             </div>
-            <p>Device</p>
+            <p>
+              The device aims to reflect light towards the drivers point of view
+              to minizmize the time lost during activities like checking fuel
+              levels, navigation, media players and gauges.
+            </p>
+            <div className="imgWrapper">
+              <img
+                className="pp-img"
+                src="/assets/projectAssets/ARFlip/arflip-device.webp"
+                alt="arflip-screenshot"
+              />
+            </div>
           </div>
         );
       case "uiux":
         return (
           <div>
-            <h2>User Experience</h2>
+            <h2>User Interface</h2>
             <p>
-              Nisi tempor tempor ipsum enim ullamco. Culpa ea dolor qui
-              excepteur.
+              Device informs the driver with small components reflected on
+              points where user can still focus on the road.
             </p>
             <h2>Components</h2>
             <div className="imgWrapper">
               <img
                 className="pp-img"
-                src="/assets/projectAssets/ARFlip/arflipComponents.webp"
-                alt="ardeo-homepage"
+                src="/assets/projectAssets/ARFlip/arflip-components.webp"
+                alt="arflip-components"
               />
             </div>
             <h2>Alerts</h2>
-            <p>notification</p>
-            <p>warnings</p>
+            <p>
+              Each alert only stays in screen for a certain amount of time
+              depending on their importance for a seamless driving experience.
+            </p>
+            <div className="imgWrapper">
+              <img
+                className="pp-img"
+                src="/assets/projectAssets/ARFlip/arflip-notification.gif"
+                alt="arflip-gif"
+              />
+            </div>
+          </div>
+        );
+      case "interaction":
+        return (
+          <div>
             <h2>Interactions</h2>
-            <p>gestures</p>
+            <p>
+              Drivers can interact with the device without giving their
+              attention out of the road. The sensors on it allows for simple
+              gesture controls that can be used to interact with media, answer
+              calls or confirm automated actions.
+            </p>
+            <div className="imgWrapper">
+              <img
+                className="pp-img"
+                src="/assets/projectAssets/ARFlip/arflip-interactions.webp"
+                alt="arflip-mediaIndicator"
+              />
+            </div>
           </div>
         );
       case "prototype":
         return (
           <div>
             <h2>3D Design</h2>
-            <p></p>
+            <p>
+              Design of the devices went through a series of iterations for
+              ergonomic reasons and manufacturing limitations.
+            </p>
             <div className="imgWrapper">
               <img
                 className="pp-img"
                 src="/assets/projectAssets/ARFlip/arflipVersions.webp"
-                alt="ardeo-homepage"
+                alt="arflip-versions"
               />
             </div>
             <h2>Manufacturing</h2>
+            <p>
+              I designed this device in a way that it can be manufactured with
+              aluminium plates during the research and development process.
+            </p>
             <div className="imgWrapper">
               <img
                 className="pp-img"
                 src="/assets/projectAssets/ARFlip/arflipCAD.webp"
-                alt="ardeo-homepage"
+                alt="arflip-cad"
               />
             </div>
             <h2>Board & Sensors</h2>
+            <p>
+              An ESP32 microcontroller board, two optical sensors and an optical
+              reflector sits inside the packaging.
+            </p>
           </div>
         );
       default:
@@ -124,7 +180,16 @@ function ARFlip() {
               }`}
               onClick={() => setSelectedSection("uiux")}
             >
-              UI/UX Design
+              Interface Design
+            </button>
+
+            <button
+              className={`section-button ${
+                selectedSection === "interaction" ? "active" : ""
+              }`}
+              onClick={() => setSelectedSection("interaction")}
+            >
+              Interaction Design
             </button>
 
             <button

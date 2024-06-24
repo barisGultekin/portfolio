@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { FaChevronLeft } from "react-icons/fa6";
 import "./BackButton.css";
 

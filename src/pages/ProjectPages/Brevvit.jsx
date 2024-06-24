@@ -25,59 +25,31 @@ function Brevvit() {
             <p>
               The brevvit application is designed to integrate seamlessly with a
               series of kitchen devices, enabling users to efficiently prepare
-              beverages like tea, milk, and smoothies. Developed in
-              collaboration between computer engineering and industrial design
-              disciplines, brevvit harnesses mobile technology and user-centered
-              design to enhance the everyday kitchen experience.
+              beverages like tea, milk, and smoothies.
             </p>
-            <br></br>
-            <h2>Key Functions</h2>
-            <br></br>
-            <b>User Profile Customization:</b>
             <p>
-              Tailored for sporty individuals, Brevvit allows users to input and
-              track health-related goals directly from their mobile device.
+              Developed in collaboration with industrial designers, brevvit
+              harnesses mobile technology and user-centered design to enhance
+              the everyday kitchen experience.
             </p>
-            <br></br>
-            <b>Dynamic Recipe Database:</b>
-            <p>
-              Equipped with a comprehensive database, the app offers a variety
-              of recipes that provide detailed nutritional information,
-              ingredients needed, and cooking methods. Bluetooth Device
-            </p>
-            <br></br>
-            <b>Connectivity:</b>
-            <p>
-              Users can connect to their kitchen tools via Bluetooth, enabling
-              them to automate the beverage-making process according to their
-              preferences.
-            </p>
+            <div className="imgWrapper">
+              <img
+                className="pp-img"
+                src="/assets/projectAssets/brevvit/brevvit-introSS.webp"
+                alt="brevvit-intro"
+              />
+            </div>
             <br></br>
             <h2>Design Process</h2>
             <p>
-              The design of Brevvit focuses on a clean and intuitive user
-              interface that reflects a modern and streamlined look, appealing
-              particularly to active, health-conscious individuals. The
-              collaborative effort between engineering and design ensured that
-              both functional and aesthetic requirements were met, creating a
-              user-friendly and visually appealing application.
+              The design focuses on a clean and intuitive user interface that
+              reflects a modern look, appealing particularly to active,
+              health-conscious individuals. The collaborative effort between
+              engineering and design ensured that both functional and aesthetic
+              requirements were met, creating a user-friendly and visually
+              appealing application.
             </p>
-          </div>
-        );
-      case "mobile":
-        return (
-          <div>
-            <h2>Mobile App</h2>
-            <p>
-              Voluptate officia fugiat commodo non incididunt incididunt id. Ut
-              officia mollit minim eu aliqua eu ad est nostrud ullamco
-              exercitation et veniam veniam. Magna in nulla fugiat adipisicing
-              aute aliqua proident aute ex esse consequat pariatur sunt ut.
-              Nulla et ipsum id cupidatat nulla. Est velit nisi enim veniam ex
-              aliqua aliquip pariatur. Laboris sit dolore aliqua pariatur enim
-              esse non sunt consectetur. Reprehenderit irure magna magna
-              occaecat.
-            </p>
+
             <div className="imgWrapper">
               <img
                 className="mobileSS"
@@ -85,26 +57,49 @@ function Brevvit() {
                 alt="brevvitux-gif"
               />
             </div>
-            <h2>Remote Control and Customization</h2>
-            ADD DEVICE
+          </div>
+        );
+      case "mobile":
+        return (
+          <div>
+            <h2>Mobile App</h2>
+
+            <br></br>
+
+            <b>User Profile Customization & Connectivity</b>
             <p>
-              Remote Control and Customization: The app allows users to operate
-              their kitchen devices remotely, set up custom drink preparations,
-              and save their favorite configurations.
-            </p>
-            <h2>Real-Time Monitoring</h2>
-            RECIPES & PREP SCREEN
-            <p>
-              Users can track the progress of their drinks in real time, with
-              notifications to alert them when their beverage is ready. Options
-              to keep the drink warm provide added convenience.
+              Users can configure their device settings and easily connect their
+              devices to their smart phones with a familiar and intuitive
+              interface.
             </p>
             <p>
-              The application contains a database of recipes that has
-              ingredients, cooking techniques and nutrients. Users can browse
-              recipes to meet their health goals or create custom configurations
-              for their drinks.
+              With devices connected, users can set goals for various plans and
+              diets they are applying.
             </p>
+            <div className="imgWrapper">
+              <img
+                className="pp-img"
+                src="/assets/projectAssets/brevvit/brevvit-config.webp"
+                alt="brevvit-configure-screens"
+              />
+            </div>
+
+            <br></br>
+
+            <b>Dynamic Recipe Database</b>
+            <p>
+              Application has a database for healthy recipes for user's
+              conveniece. However, it is very easy to customize the settings for
+              a spesific recipe or personal needs.
+            </p>
+
+            <div className="imgWrapper">
+              <img
+                className="pp-img"
+                src="/assets/projectAssets/brevvit/brevvit-recipes.webp"
+                alt="brevvit-recipe-screens"
+              />
+            </div>
           </div>
         );
       case "ondevice":
@@ -123,7 +118,7 @@ function Brevvit() {
             <div className="imgWrapper">
               <img
                 className="pp-img"
-                src="/assets/projectAssets/brevvit/brevvitDeviceScreens.webp"
+                src="/assets/projectAssets/brevvit/brevvit-devices.webp"
                 alt="brevvit-ondevice"
               />
             </div>

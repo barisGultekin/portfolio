@@ -8,23 +8,29 @@ import Banner from "../../components/Banner/Banner";
 import ContactForm from "../../components/ContactForm/ContactForm";
 import NavigationButton from "../../components/NavigationButton/NavigationButton";
 
-// social icons
+// icons
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
-
-// contact icons
 import { FaRegEnvelope, FaBehance } from "react-icons/fa";
 import { FiPhone } from "react-icons/fi";
 import { TbLocation } from "react-icons/tb";
 
 const images = [
-  { src: "/assets/bannerImages/banner1.webp", title: "Natural Produce Marketplace" },
-  { src: "/assets/bannerImages/banner2.webp", title: "Digital Wallet & Finance Manager" },
-  { src: "/assets/bannerImages/banner3.webp", title: "Streetwear eCommerce Shop" },
+  {
+    src: "/assets/bannerImages/banner1.webp",
+    title: "Natural Produce Marketplace",
+  },
+  {
+    src: "/assets/bannerImages/banner2.webp",
+    title: "Digital Wallet & Finance Manager",
+  },
+  {
+    src: "/assets/bannerImages/banner3.webp",
+    title: "Streetwear eCommerce Shop",
+  },
   { src: "/assets/bannerImages/banner4.webp", title: "Marina & Boating Guide" },
   { src: "/assets/bannerImages/banner5.webp", title: "Golf Course Navigator" },
   { src: "/assets/bannerImages/banner6.webp", title: "Cycling Route Planner" },
 ];
-
 
 function Home() {
   const featuredProjects = projectsData.filter((project) => project.featured);
@@ -33,14 +39,23 @@ function Home() {
     <div className="home">
       <section className="home-intro">
         <div className="home-intro-box">
-          <h1>Ali Barış Gültekin</h1>
-          <h2>Developer & Designer</h2>
-          <p>
-            I combine technical expertise with a creative flair to transform
-            complex ideas into user-friendly, interactive products. Let’s
-            collaborate to bring your vision to life and craft seamless and
-            engaging digital experiences.
-          </p>
+          <h1 className="home-mainTitle">Ali Barış Gültekin</h1>
+
+          <div className="home-intro-titles">
+            <div className="home-intro-title">Developer</div>
+            <div className="home-intro-title">Designer</div>
+            <div className="home-intro-title">Creative Engineer</div>
+          </div>
+
+          <div className="home-intro-content">
+            <p>
+              I combine technical expertise with a creative flair to transform
+              complex ideas into user-friendly, interactive products.
+            </p>
+          </div>
+        </div>
+        <div className="home-swipebutton">
+          
         </div>
       </section>
 

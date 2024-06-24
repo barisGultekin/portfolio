@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import "./Banner.css";
 
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
@@ -42,15 +42,15 @@ const Banner = ({ images }) => {
     setPopupImageIndex(null);
   };
 
-  const handleNextImage = () => {
+  const handleNextImage = useCallback(() => {
     setPopupImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
+  }, [images.length]);
 
-  const handlePrevImage = () => {
+  const handlePrevImage = useCallback(() => {
     setPopupImageIndex(
       (prevIndex) => (prevIndex - 1 + images.length) % images.length
     );
-  };
+  }, [images.length]);
 
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -69,7 +69,7 @@ const Banner = ({ images }) => {
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [showPopup]);
+  }, [showPopup, handleNextImage, handlePrevImage]);
 
   return (
     <div>

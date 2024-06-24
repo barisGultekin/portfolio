@@ -3,10 +3,8 @@ import "./components/ProjectPages.css";
 
 import BackButton from "../../components/BackButton/BackButton";
 
-import Collaborator from "./components/Collaborator/Collaborator";
-
 function EnvSoc() {
-  const [selectedSection, setSelectedSection] = useState("overview");
+  const [selectedSection, setSelectedSection] = useState("branding");
   const contentRef = useRef(null);
 
   useEffect(() => {
@@ -19,30 +17,64 @@ function EnvSoc() {
 
   const renderSectionContent = () => {
     switch (selectedSection) {
-      case "overview":
+      case "branding":
         return (
           <div>
-            <h2>Overview</h2>
-            <p>
-              Nisi tempor tempor ipsum enim ullamco. Culpa ea dolor qui
-              excepteur eiusmod labore irure eiusmod cillum id. Sint occaecat
-              amet nisi sunt duis ut eu laborum deserunt et labore. Sunt
-              cupidatat est sit voluptate aute minim fugiat occaecat.
-            </p>
-            <p>
-              Culpa officia aute nulla id occaecat. Anim non ut sint sunt et
-              officia elit proident. Exercitation commodo aliquip adipisicing ad
-              sit fugiat incididunt sint.
-            </p>
-            <p>
-              Est est magna commodo elit consectetur commodo pariatur culpa do
-              commodo eu. Deserunt veniam reprehenderit dolore adipisicing esse
-              fugiat deserunt veniam aliqua aliquip adipisicing aliquip.
-              Proident tempor commodo aliquip ad eiusmod laborum ex ad. Id nulla
-              labore consectetur pariatur nulla labore nostrud aute Lorem nulla
-              cupidatat adipisicing amet qui. Enim proident sint nulla do
-              ullamco irure commodo quis ut ipsum in nisi.
-            </p>
+            <h2>Branding</h2>
+            <b>Logo Designs</b>
+            <div className="imgWrapper">
+              <img
+                className="pp-img"
+                src="/assets/projectAssets/EnvSoc/envsoc-logo.webp"
+                alt="envsoc-logo"
+              />
+            </div>
+            <b>Banner Designs</b>
+            <div className="imgWrapper">
+              <img
+                className="pp-img"
+                src="/assets/projectAssets/EnvSoc/envsoc-banners.webp"
+                alt="envsoc-banners"
+              />
+            </div>
+          </div>
+        );
+      case "event":
+        return (
+          <div>
+            <h2>Green Summit</h2>
+            <b>Event Logo Design</b>
+            <div className="imgWrapper">
+              <img
+                className="pp-img"
+                src="/assets/projectAssets/EnvSoc/envsoc-summit.webp"
+                alt="envspoc-summit"
+              />
+            </div>
+            <b>Stickers</b>
+            <div className="imgWrapper">
+              <img
+                className="pp-img"
+                src="/assets/projectAssets/EnvSoc/envsoc-stickers.webp"
+                alt="envsoc-stickers"
+              />
+            </div>
+            <b>Poster</b>
+            <div className="imgWrapper">
+              <img
+                className="pp-img"
+                src="/assets/projectAssets/EnvSoc/envsoc-poster.webp"
+                alt="envsoc-poster"
+              />
+            </div>
+            <b>Badges</b>
+            <div className="imgWrapper">
+              <img
+                className="pp-img"
+                src="/assets/projectAssets/EnvSoc/envsoc-badge.webp"
+                alt="envsoc-badge"
+              />
+            </div>
           </div>
         );
       default:
@@ -57,12 +89,9 @@ function EnvSoc() {
           <BackButton className="pp-backButton" />
           <h1>IZTECH Environment Society</h1>
           <p>
-            Excepteur esse occaecat ullamco velit amet voluptate sit est dolor
-            cupidatat non reprehenderit. Ea culpa irure esse incididunt irure
-            est mollit excepteur do commodo. Lorem qui nostrud velit fugiat.
-            Cupidatat ut cillum quis minim aliqua ut dolore duis enim nostrud
-            ex. Sunt dolor adipisicing eu nostrud. Ea est irure dolore cupidatat
-            laboris excepteur excepteur ut ullamco.
+            I designed the brand identity of Izmir Institute of Technology
+            Environment Society. They work on environmental issues like clean
+            waters, forest preservation and clean energy.
           </p>
 
           <br />
@@ -71,11 +100,19 @@ function EnvSoc() {
           <div className="sections">
             <button
               className={`section-button ${
-                selectedSection === "overview" ? "active" : ""
+                selectedSection === "branding" ? "active" : ""
               }`}
-              onClick={() => setSelectedSection("overview")}
+              onClick={() => setSelectedSection("branding")}
             >
-              Overview
+              Branding
+            </button>
+            <button
+              className={`section-button ${
+                selectedSection === "event" ? "active" : ""
+              }`}
+              onClick={() => setSelectedSection("event")}
+            >
+              Green Summit
             </button>
           </div>
         </div>

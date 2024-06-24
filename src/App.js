@@ -1,6 +1,6 @@
 import './App.css';
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Layout from './components/Layout/Layout';
 import ScrollToTop from './components/ScrollToTop';
@@ -10,14 +10,16 @@ import Home from './pages/Home/Home';
 import Contact from './pages/Contact/Contact';
 import Projects from './pages/Projects/Projects';
 
+import Privacy from './pages/Legals/Privacy';
+import Terms from './pages/Legals/Terms';
+
 import Ardeo from './pages/ProjectPages/Ardeo';
 import Wire from './pages/ProjectPages/Wire';
 import Brevvit from './pages/ProjectPages/Brevvit';
-import Moin from './pages/ProjectPages/Moin';
 import ARFlip from './pages/ProjectPages/ARFlip';
 import EnvSoc from './pages/ProjectPages/EnvSoc';
-import MunAtk from './pages/ProjectPages/MunAtk';
 import Sailing from './pages/ProjectPages/Sailing';
+
 function App() {
   return (
     <div className="App">
@@ -29,13 +31,15 @@ function App() {
             <Route index element={<Home />} />
             <Route path="projects" element={<Projects />} />
             <Route path="contact" element={<Contact />} />
+
+            <Route path="privacy" element={<Privacy />} />
+            <Route path="terms" element={<Terms />} />
+
             <Route path="projects/ardeo" element={<Ardeo />} />
             <Route path="projects/wire" element={<Wire />} />
             <Route path="projects/brevvit" element={<Brevvit />} />
-            <Route path="projects/moin" element={<Moin />} />
             <Route path="projects/arflip" element={<ARFlip />} />
             <Route path="projects/iztechsailing" element={<Sailing />} />
-            <Route path="projects/munatk" element={<MunAtk />} />
             <Route path="projects/envsoc" element={<EnvSoc />} />
           </Route>
         </Routes>

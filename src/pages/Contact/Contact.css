@@ -2,3 +2,118 @@
     padding: 10em 12em 0 12em;
     min-height: 90vh;
 }
+
+.contact-aboutMe {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    width: 100%;
+    padding: 3em 0 4em 0;
+}
+
+.contact-header {
+    display: flex;
+    flex-direction: column;
+    gap: .8em;
+}
+
+.contact-downloads {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.contact-downloadButton {
+    width: 100%;
+}
+
+.contact-socialIcons {
+    display: flex;
+    align-items: center;
+    gap: .8em;
+}
+
+.contact-contactLinks-content {
+    display: flex;
+    flex-direction: column;
+    gap: .8em;
+}
+
+.contact-contactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: .8em;
+}
+
+@media only screen and (max-width: 1250px) {
+    .contact {
+        padding: 10em 5em 0 5em;
+        min-height: 90vh;
+    }
+
+    .contact-aboutMe {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2em 0 4em 0;
+    }
+
+    .contact-header {
+        align-items:flex-start;
+    }
+
+    .contact-contactLinks-content {
+        align-items:flex-start;
+        width: 50%;
+    }
+
+    .contact-contactInfo {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    .contact {
+        padding: 10em 2em 0 2em;
+        min-height: 90vh;
+    }
+
+    .contact-header h2 {
+        font-size: 1.6em;
+        font-weight: 500;
+        white-space: nowrap;
+    }
+
+    .contact-aboutMe {
+        flex-direction: column;
+        align-items: center;
+        padding: 2em 0 4em 0;
+    }
+
+    .contact-header {
+        align-items: center;
+    }
+
+    .contact-contactLinks-content {
+        align-items: center;
+    }
+
+    .contact-contactInfo {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .contact {
+        padding: 6em 1em 0 1em;
+    }
+
+    .contact-downloads {
+        flex-direction: column;
+    }
+
+    .contact-title, .contact-desc {
+        display: none;
+    }
+}

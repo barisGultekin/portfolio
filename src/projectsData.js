@@ -37,15 +37,6 @@ const projectsData = [
   },
   {
     id: 5,
-    slug: 'moin',
-    title: 'Moin',
-    description: 'This is the first sample project description.',
-    imageUrl: '/assets/projectAssets/Moin/moinCover.webp',
-    tags: ['Frontend', 'Branding'],
-    featured: false
-  },
-  {
-    id: 6,
     slug: 'iztechsailing',
     title: 'IZTECH Sailing',
     description: 'This is the first sample project description.',
@@ -54,7 +45,7 @@ const projectsData = [
     featured: false
   },
   {
-    id: 7,
+    id: 6,
     slug: 'envsoc',
     title: 'ENVSOC',
     description: 'This is the first sample project description.',

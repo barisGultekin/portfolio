@@ -1,7 +1,7 @@
 .projects {
-    padding: 10em 12em 0 12em;
-    background-repeat: no-repeat;
-    min-height: 90vh;
+  padding: 10em 12em 0 12em;
+  background-repeat: no-repeat;
+  min-height: 90vh;
 }
 
 .projects-content {
@@ -10,7 +10,7 @@
 }
 
 .projects-header {
-    margin-bottom: 2em;
+  margin-bottom: 2em;
 }
 
 .projects-list {
@@ -19,20 +19,24 @@
   gap: 20px;
 }
 
+.projects-searchBar {
+  width: 100%;
+}
+
 .projects h1,
 .projects p,
 .projects-searchBar,
 .projects-list {
-    opacity: 0;
-    animation: fadeIn 1s ease forwards;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
 }
 
-.home-intro h1 {
-    animation-delay: 0.2s;
+.projects h1 {
+  animation-delay: 0.2s;
 }
 
-.home-intro p {
-    animation-delay: 0.4s;
+.projects p {
+  animation-delay: 0.4s;
 }
 
 .projects-searchBar {
@@ -45,6 +49,12 @@
 
 @media only screen and (max-width: 1300px) {
   .projects {
-    padding: 10em 10em 0 10em;
+    padding: 10em 6em 0 6em;
+  }
 }
+
+@media only screen and (max-width: 580px) {
+  .projects {
+    padding: 10em 1em 0 1em;
+  }
 }

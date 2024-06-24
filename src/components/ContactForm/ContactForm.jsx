@@ -2,8 +2,11 @@ import React, { useState, useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import "./ContactForm.css";
 
+import { IoClose } from "react-icons/io5";
+
 const ContactForm = () => {
   const form = useRef();
+  const [emailStatus, setEmailStatus] = useState(""); // State to track email submission status
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -18,9 +21,11 @@ const ContactForm = () => {
       .then(
         (result) => {
           console.log("SUCCESS!", result.text);
+          setEmailStatus("success"); // Set status to success
         },
         (error) => {
           console.log("FAILED...", error.text);
+          setEmailStatus("error"); // Set status to error
         }
       );
 
@@ -66,6 +71,18 @@ const ContactForm = () => {
         <button type="submit" className="button">
           Send
         </button>
+        {emailStatus === "success" && (
+          <div className="feedback-message success-message">
+            <p>Your message has been sent successfully!</p>
+            <IoClose className="feedback-closeButton" onClick={() => setEmailStatus("")}/>
+          </div>
+        )}
+        {emailStatus === "error" && (
+          <div className="feedback-message error-message">
+            <p>Failed to send your message. Please try again.</p>
+            <IoClose className="feedback-closeButton" onClick={() => setEmailStatus("")}/>
+          </div>
+        )}
       </form>
     </div>
   );

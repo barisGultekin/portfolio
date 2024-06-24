@@ -75,3 +75,9 @@
     font-size: .8em;
     white-space: nowrap;
 }
+
+@media only screen and (max-width: 600px) {
+    .pc-tags {
+        justify-content: center;
+    }
+}
