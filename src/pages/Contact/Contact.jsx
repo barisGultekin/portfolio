@@ -3,11 +3,11 @@ import "./Contact.css";
 
 import ContactForm from "../../components/ContactForm/ContactForm";
 import DownloadPreviewButton from "../../components/DownloadButtons/DownloadPreviewButton/DownloadPreviewButton";
+import ContactInfoBox from "../../components/ContactInfoBox/ContactInfoBox";
+
 
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
-import { FaRegEnvelope, FaBehance } from "react-icons/fa";
-import { FiPhone } from "react-icons/fi";
-import { TbLocation } from "react-icons/tb";
+import { FaBehance } from "react-icons/fa";
 
 function Contact() {
   return (
@@ -26,30 +26,36 @@ function Contact() {
             <h2>Ali Barış GÜLTEKİN</h2>
 
             <div className="home-socialIcons">
-              <div className="iconBox">
+              <a
+                href="https://www.linkedin.com/in/alibarisgultekin"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="iconBox"
+              >
                 <FaLinkedinIn />
-              </div>
-              <div className="iconBox">
+              </a>
+              <a
+                href="https://github.com/barisGultekin"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="iconBox"
+              >
                 <FaGithub />
-              </div>
-              <div className="iconBox">
+              </a>
+              <a
+                href="https://www.behance.net/alibargltekin"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="iconBox"
+              >
                 <FaBehance />
-              </div>
+              </a>
             </div>
           </div>
           <div className="contact-contactInfo">
-            <div className="contactInfoBox">
-              <FaRegEnvelope />
-              <p>alibarisgultekin@gmail.com</p>
-            </div>
-            <div className="contactInfoBox">
-              <FiPhone />
-              <p>+90 (534) 396 11 60</p>
-            </div>
-            <div className="contactInfoBox">
-              <TbLocation />
-              <p>İzmir, Türkiye</p>
-            </div>
+            <ContactInfoBox type="email" content="alibarisgultekin@gmail.com" />
+            <ContactInfoBox type="phone" content="+90 (534) 396 11 60" />
+            <ContactInfoBox type="location" content="İzmir, Türkiye" />
           </div>
         </div>
 
