@@ -24,22 +24,22 @@ function Sailing() {
             <div className="imgWrapper">
               <img
                 className="pp-img"
-                src="/assets/projectAssets/Sailing/sailing-logos.webp"
+                src={`${process.env.PUBLIC_URL}/assets/projectAssets/Sailing/sailing-logos.webp`}
                 alt="sailing-logos"
               />
             </div>
             <div className="imgWrapper">
               <img
                 className="pp-img"
-                src="/assets/projectAssets/Sailing/sailing-poster.webp"
-                alt="sailing-logos"
+                src={`${process.env.PUBLIC_URL}/assets/projectAssets/Sailing/sailing-poster.webp`}
+                alt="sailing-poster"
               />
             </div>
             <div className="imgWrapper">
               <img
                 className="pp-img"
-                src="/assets/projectAssets/Sailing/sailing-concepts.webp"
-                alt="sailing-logos"
+                src={`${process.env.PUBLIC_URL}/assets/projectAssets/Sailing/sailing-concepts.webp`}
+                alt="sailing-concepts"
               />
             </div>
           </div>
@@ -51,8 +51,8 @@ function Sailing() {
             <div className="imgWrapper">
               <img
                 className="pp-img"
-                src="/assets/projectAssets/Sailing/sailing-concepts.webp"
-                alt="sailing-logos"
+                src={`${process.env.PUBLIC_URL}/assets/projectAssets/Sailing/sailing-merchDesign.webp`}
+                alt="sailing-merch"
               />
             </div>
           </div>

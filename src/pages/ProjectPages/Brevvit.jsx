@@ -35,7 +35,7 @@ function Brevvit() {
             <div className="imgWrapper">
               <img
                 className="pp-img"
-                src="/assets/projectAssets/brevvit/brevvit-introSS.webp"
+                src={`${process.env.PUBLIC_URL}/assets/projectAssets/brevvit/brevvit-introSS.webp`}
                 alt="brevvit-intro"
               />
             </div>
@@ -53,7 +53,8 @@ function Brevvit() {
             <div className="imgWrapper">
               <img
                 className="mobileSS"
-                src="/assets/projectAssets/brevvit/brevvitux.gif"
+                src={`${process.env.PUBLIC_URL}/assets/projectAssets/brevvit/brevvitux.gif`}
+
                 alt="brevvitux-gif"
               />
             </div>
@@ -79,7 +80,7 @@ function Brevvit() {
             <div className="imgWrapper">
               <img
                 className="pp-img"
-                src="/assets/projectAssets/brevvit/brevvit-config.webp"
+                src={`${process.env.PUBLIC_URL}/assets/projectAssets/brevvit/brevvit-config.webp`}
                 alt="brevvit-configure-screens"
               />
             </div>
@@ -96,7 +97,7 @@ function Brevvit() {
             <div className="imgWrapper">
               <img
                 className="pp-img"
-                src="/assets/projectAssets/brevvit/brevvit-recipes.webp"
+                src={`${process.env.PUBLIC_URL}/assets/projectAssets/brevvit/brevvit-recipes.webp`}
                 alt="brevvit-recipe-screens"
               />
             </div>
@@ -118,7 +119,7 @@ function Brevvit() {
             <div className="imgWrapper">
               <img
                 className="pp-img"
-                src="/assets/projectAssets/brevvit/brevvit-devices.webp"
+                src={`${process.env.PUBLIC_URL}/assets/projectAssets/brevvit/brevvit-devices.webp`}
                 alt="brevvit-ondevice"
               />
             </div>

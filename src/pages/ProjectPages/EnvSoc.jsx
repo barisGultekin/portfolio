@@ -25,7 +25,7 @@ function EnvSoc() {
             <div className="imgWrapper">
               <img
                 className="pp-img"
-                src="/assets/projectAssets/EnvSoc/envsoc-logo.webp"
+                src={`${process.env.PUBLIC_URL}/assets/projectAssets/EnvSoc/envsoc-logo.webp`}
                 alt="envsoc-logo"
               />
             </div>
@@ -33,7 +33,7 @@ function EnvSoc() {
             <div className="imgWrapper">
               <img
                 className="pp-img"
-                src="/assets/projectAssets/EnvSoc/envsoc-banners.webp"
+                src={`${process.env.PUBLIC_URL}/assets/projectAssets/EnvSoc/envsoc-banners.webp`}
                 alt="envsoc-banners"
               />
             </div>
@@ -47,7 +47,7 @@ function EnvSoc() {
             <div className="imgWrapper">
               <img
                 className="pp-img"
-                src="/assets/projectAssets/EnvSoc/envsoc-summit.webp"
+                src={`${process.env.PUBLIC_URL}/assets/projectAssets/EnvSoc/envsoc-summit.webp`}
                 alt="envspoc-summit"
               />
             </div>
@@ -55,7 +55,7 @@ function EnvSoc() {
             <div className="imgWrapper">
               <img
                 className="pp-img"
-                src="/assets/projectAssets/EnvSoc/envsoc-stickers.webp"
+                src={`${process.env.PUBLIC_URL}/assets/projectAssets/EnvSoc/envsoc-stickers.webp`}
                 alt="envsoc-stickers"
               />
             </div>
@@ -63,7 +63,7 @@ function EnvSoc() {
             <div className="imgWrapper">
               <img
                 className="pp-img"
-                src="/assets/projectAssets/EnvSoc/envsoc-poster.webp"
+                src={`${process.env.PUBLIC_URL}/assets/projectAssets/EnvSoc/envsoc-poster.webp`}
                 alt="envsoc-poster"
               />
             </div>
@@ -71,7 +71,7 @@ function EnvSoc() {
             <div className="imgWrapper">
               <img
                 className="pp-img"
-                src="/assets/projectAssets/EnvSoc/envsoc-badge.webp"
+                src={`${process.env.PUBLIC_URL}/assets/projectAssets/EnvSoc/envsoc-badge.webp`}
                 alt="envsoc-badge"
               />
             </div>

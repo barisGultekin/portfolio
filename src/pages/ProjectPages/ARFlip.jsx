@@ -77,7 +77,7 @@ function ARFlip() {
             <div className="imgWrapper">
               <img
                 className="pp-img"
-                src={`${process.env.PUBLIC_URL}/assets/projectAssets/ARFlip/arflip-notification.webp`}
+                src={`${process.env.PUBLIC_URL}/assets/projectAssets/ARFlip/arflip-notification.gif`}
                 alt="arflip-gif"
               />
             </div>
