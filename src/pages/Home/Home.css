@@ -4,8 +4,10 @@
 
 .home-intro-box,
 .home-intro h1,
-.home-intro h2,
-.home-intro p,
+#title-1,
+#title-2,
+#title-3,
+.home-intro-content,
 .home-recentProjects
 {
     opacity: 0;
@@ -17,19 +19,27 @@
 }
 
 .home-intro h1 {
-    animation-delay: 0.4s;
+    animation-delay: 0.2s;
 }
 
-.home-intro h2 {
+#title-1 {
     animation-delay: 0.6s;
 }
 
-.home-intro p {
+#title-2 {
     animation-delay: 0.8s;
 }
 
+#title-3 {
+    animation-delay: 1s;
+}
+
+.home-intro-content {
+    animation-delay: 1.2s;
+}
+
 .home-recentProjects {
-    animation-delay: 0.2s;
+    animation-delay: 0.8s;
 }
 
 /* ---------------------------------------------------------------------- */
@@ -233,7 +243,7 @@
     transform: scale(1.02);
 }
 
-.contactInfoBox {
+/* .contactInfoBox {
     display: flex;
     align-items: center;
     gap: 1em;
@@ -257,14 +267,15 @@
 .contactInfoBox:hover {
     background: var(--main-color);
     color: var(--background-color);
-    cursor: copy;
+    cursor: pointer;
     transform: scale(1.02);
 }
 
 .contactInfoBox p {
     font-size: 16px;
     white-space: nowrap;
-}
+    cursor: pointer;
+} */
 
 @media only screen and (max-width: 1100px) {
     .home section, .home-conceptDesigns {

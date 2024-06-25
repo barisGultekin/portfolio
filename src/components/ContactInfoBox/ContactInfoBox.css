@@ -1,0 +1,64 @@
+/* ContactInfoBox.css */
+.contactInfoBox {
+    position: relative;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: 1em;
+
+    padding: 0 1.2em;
+    height: 3em;
+    border-radius: 8px;
+
+    background: var(--glass-background);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+
+    font-size: 1.4em;
+    color: var(--ivory);
+
+    transition: background 0.3s ease, transform 0.3s ease, color 0.3s ease;
+  }
+
+  .contactInfoBox:hover {
+    background: var(--main-color);
+    color: var(--background-color);
+    cursor: pointer;
+    transform: scale(1.02);
+}
+  
+  .contactInfoBox p, .contactInfoBox a {
+    font-size: 16px;
+    white-space: nowrap;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+  
+  .contactInfoBox .tooltiptext {
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: .8em 1.6em;
+    position: absolute;
+    z-index: 1;
+
+    left: 100%;
+    margin-left: 15px;
+    opacity: 0;
+
+    font-size: .8em;
+
+    transition: opacity 0.3s;
+  }
+  
+  .contactInfoBox:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+  

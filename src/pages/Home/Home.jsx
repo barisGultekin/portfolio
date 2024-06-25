@@ -7,6 +7,7 @@ import ProjectCardHome from "../../components/ProjectCardHome/ProjectCardHome";
 import Banner from "../../components/Banner/Banner";
 import ContactForm from "../../components/ContactForm/ContactForm";
 import NavigationButton from "../../components/NavigationButton/NavigationButton";
+import ContactInfoBox from "../../components/ContactInfoBox/ContactInfoBox";
 
 // icons
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
@@ -51,9 +52,15 @@ function Home() {
           <h1 className="home-mainTitle">Ali Barış Gültekin</h1>
 
           <div className="home-intro-titles">
-            <div className="home-intro-title">Developer</div>
-            <div className="home-intro-title">Designer</div>
-            <div className="home-intro-title">Creative Engineer</div>
+            <div className="home-intro-title" id="title-1">
+              Developer
+            </div>
+            <div className="home-intro-title" id="title-2">
+              Designer
+            </div>
+            <div className="home-intro-title" id="title-3">
+              Creative Engineer
+            </div>
           </div>
 
           <div className="home-intro-content">
@@ -98,30 +105,36 @@ function Home() {
 
             <div className="home-contactLinks-content">
               <div className="home-socialIcons">
-                <div className="iconBox">
+                <a
+                  href="https://www.linkedin.com/in/alibarisgultekin"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="iconBox"
+                >
                   <FaLinkedinIn />
-                </div>
-                <div className="iconBox">
+                </a>
+                <a
+                  href="https://github.com/barisGultekin"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="iconBox"
+                >
                   <FaGithub />
-                </div>
-                <div className="iconBox">
+                </a>
+                <a
+                  href="https://www.behance.net/alibargltekin"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="iconBox"
+                >
                   <FaBehance />
-                </div>
+                </a>
               </div>
 
               <div className="home-contactInfo">
-                <div className="contactInfoBox">
-                  <FaRegEnvelope />
-                  <p>alibarisgultekin@gmail.com</p>
-                </div>
-                <div className="contactInfoBox">
-                  <FiPhone />
-                  <p>+90 (534) 396 11 60</p>
-                </div>
-                <div className="contactInfoBox">
-                  <TbLocation />
-                  <p>İzmir, Türkiye</p>
-                </div>
+                <ContactInfoBox type="email" content="alibarisgultekin@gmail.com"/>
+                <ContactInfoBox type="phone" content="+90 (534) 396 11 60"/>
+                <ContactInfoBox type="location" content="İzmir, Türkiye"/>
               </div>
             </div>
           </div>

@@ -1,3 +1,22 @@
+.contact h1,
+.contact p,
+.contact-aboutMe {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+.contact h1 {
+    animation-delay: 0.2s;
+}
+
+.contact p {
+    animation-delay: 0.4s;
+}
+
+.contact-aboutMe {
+    animation-delay: 0.5s;
+}
+
 .contact {
     padding: 10em 12em 0 12em;
     min-height: 90vh;
@@ -59,11 +78,11 @@
     }
 
     .contact-header {
-        align-items:flex-start;
+        align-items: flex-start;
     }
 
     .contact-contactLinks-content {
-        align-items:flex-start;
+        align-items: flex-start;
         width: 50%;
     }
 
@@ -113,7 +132,8 @@
         flex-direction: column;
     }
 
-    .contact-title, .contact-desc {
+    .contact-title,
+    .contact-desc {
         display: none;
     }
 }
