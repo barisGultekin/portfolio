@@ -1,17 +1,29 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
-
+import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 
-const Layout = () => (
-  <div className="layout">
-    <Navbar />
-    <main>
-      <Outlet />
-    </main>
-    <Footer />
-  </div>
-);
+const Layout = () => {
+  const location = useLocation();
+  const hideNavbarRoutes = [
+    "/projects/ardeo",
+    "/projects/wire",
+    "/projects/brevvit",
+    "/projects/arflip",
+    "/projects/iztechsailing",
+    "/projects/envsoc"
+  ];
+  const showNavbar = !hideNavbarRoutes.includes(location.pathname);
+
+  return (
+    <div className="layout">
+      {showNavbar && <Navbar />}
+      <main>
+        <Outlet />
+      </main>
+      <Footer />
+    </div>
+  );
+};
 
 export default Layout;
