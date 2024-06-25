@@ -1,0 +1,26 @@
+.section-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.section-navigation .spacer {
+    flex-grow: 1;
+}
+
+@media only screen and (max-width: 480px) {
+    .section-navigation {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: .6em;
+    }
+
+    .section-navigation .button {
+        width: 100%;
+    }
+
+    .section-navigation .prev {
+        background-color: transparent;
+    }
+}
