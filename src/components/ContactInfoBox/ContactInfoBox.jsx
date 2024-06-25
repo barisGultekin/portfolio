@@ -29,25 +29,26 @@ function ContactInfoBox({ type, content }) {
     }
   };
 
-  const renderContent = () => {
-    if (type === 'email') {
-      return <a href={`mailto:${content}`}>{content}</a>;
-    }
-    return <p>{content}</p>;
-  };
-
-  const handleClick = () => {
+  const handleClick = (e) => {
     if (type !== 'email') {
       handleCopy();
     }
   };
 
-  return (
+  const contentElement = (
     <div className="contactInfoBox" onClick={handleClick}>
       {renderIcon()}
-      {renderContent()}
+      <p>{content}</p>
       <span className="tooltiptext">{tooltipText}</span>
     </div>
+  );
+
+  return type === 'email' ? (
+    <a href={`mailto:${content}`} className="contactInfoBox-link">
+      {contentElement}
+    </a>
+  ) : (
+    contentElement
   );
 }
 
