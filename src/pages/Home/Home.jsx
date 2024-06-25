@@ -11,9 +11,7 @@ import ContactInfoBox from "../../components/ContactInfoBox/ContactInfoBox";
 
 // icons
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
-import { FaRegEnvelope, FaBehance } from "react-icons/fa";
-import { FiPhone } from "react-icons/fi";
-import { TbLocation } from "react-icons/tb";
+import { FaBehance } from "react-icons/fa";
 
 const images = [
   {
