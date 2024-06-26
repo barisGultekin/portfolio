@@ -2,8 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import "./components/ProjectPages.css";
 
 import BackButton from "../../components/BackButton/BackButton";
-
 import Collaborator from "./components/Collaborator/Collaborator";
+import SectionNavigation from "./components/SectionNavigation/SectionNavigation";
 
 function ARFlip() {
   const [selectedSection, setSelectedSection] = useState("overview");
@@ -141,6 +141,13 @@ function ARFlip() {
     }
   };
 
+  const sections = [
+    { keyword: "overview", title: "Overview" },
+    { keyword: "uiux", title: "Interface Design" },
+    { keyword: "interaction", title: "Interaction Design" },
+    { keyword: "prototype", title: "Prototype" },
+  ];
+
   return (
     <div className="pp-container">
       <div className="pp">
@@ -205,6 +212,11 @@ function ARFlip() {
 
         <div className="fade-in" ref={contentRef}>
           <div className="pp-content">{renderSectionContent()}</div>
+          <SectionNavigation
+            sections={sections}
+            selectedSection={selectedSection}
+            setSelectedSection={setSelectedSection}
+          />
         </div>
       </div>
     </div>

@@ -2,8 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import "./components/ProjectPages.css";
 
 import BackButton from "../../components/BackButton/BackButton";
-
 import Collaborator from "./components/Collaborator/Collaborator";
+import SectionNavigation from "./components/SectionNavigation/SectionNavigation";
 
 import { FaLink } from "react-icons/fa6";
 
@@ -245,6 +245,13 @@ function Ardeo() {
     }
   };
 
+  const sections = [
+    { keyword: "overview", title: "Overview" },
+    { keyword: "branding", title: "Branding" },
+    { keyword: "uiux", title: "UI/UX Design" },
+    { keyword: "dev", title: "Development" },
+  ];
+
   return (
     <div className="pp-container">
       <div className="pp">
@@ -319,6 +326,11 @@ function Ardeo() {
         </div>
         <div className="fade-in" ref={contentRef}>
           <div className="pp-content">{renderSectionContent()}</div>
+          <SectionNavigation
+            sections={sections}
+            selectedSection={selectedSection}
+            setSelectedSection={setSelectedSection}
+          />
         </div>
       </div>
     </div>

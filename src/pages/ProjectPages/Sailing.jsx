@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import "./components/ProjectPages.css";
 
 import BackButton from "../../components/BackButton/BackButton";
+import SectionNavigation from "./components/SectionNavigation/SectionNavigation";
 
 function Sailing() {
   const [selectedSection, setSelectedSection] = useState("branding");
@@ -62,6 +63,11 @@ function Sailing() {
     }
   };
 
+  const sections = [
+    { keyword: "branding", title: "Branding" },
+    { keyword: "merch", title: "Merchandise" },
+  ];
+
   return (
     <div className="pp-container">
       <div className="pp">
@@ -99,6 +105,11 @@ function Sailing() {
 
         <div className="fade-in" ref={contentRef}>
           <div className="pp-content">{renderSectionContent()}</div>
+          <SectionNavigation
+            sections={sections}
+            selectedSection={selectedSection}
+            setSelectedSection={setSelectedSection}
+          />
         </div>
       </div>
     </div>

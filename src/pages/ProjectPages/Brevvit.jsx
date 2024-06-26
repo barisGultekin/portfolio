@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import "./components/ProjectPages.css";
 
 import BackButton from "../../components/BackButton/BackButton";
+import SectionNavigation from "./components/SectionNavigation/SectionNavigation";
 
 function Brevvit() {
   const [selectedSection, setSelectedSection] = useState("overview");
@@ -130,6 +131,12 @@ function Brevvit() {
     }
   };
 
+  const sections = [
+    { keyword: "overview", title: "Overview" },
+    { keyword: "mobile", title: "Mobile UI" },
+    { keyword: "ondevice", title: "Device UI" },
+  ];
+
   return (
     <div className="pp-container">
       <div className="pp">
@@ -178,6 +185,11 @@ function Brevvit() {
         </div>
         <div className="fade-in" ref={contentRef}>
           <div className="pp-content">{renderSectionContent()}</div>
+          <SectionNavigation
+            sections={sections}
+            selectedSection={selectedSection}
+            setSelectedSection={setSelectedSection}
+          />
         </div>
       </div>
     </div>

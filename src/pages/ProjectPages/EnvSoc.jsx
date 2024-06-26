@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import "./components/ProjectPages.css";
 
 import BackButton from "../../components/BackButton/BackButton";
+import SectionNavigation from "./components/SectionNavigation/SectionNavigation";
 
 function EnvSoc() {
   const [selectedSection, setSelectedSection] = useState("branding");
@@ -82,6 +83,11 @@ function EnvSoc() {
     }
   };
 
+  const sections = [
+    { keyword: "branding", title: "Branding" },
+    { keyword: "event", title: "Green Summit" },
+  ];
+
   return (
     <div className="pp-container">
       <div className="pp">
@@ -119,6 +125,11 @@ function EnvSoc() {
 
         <div className="fade-in" ref={contentRef}>
           <div className="pp-content">{renderSectionContent()}</div>
+          <SectionNavigation
+            sections={sections}
+            selectedSection={selectedSection}
+            setSelectedSection={setSelectedSection}
+          />
         </div>
       </div>
     </div>

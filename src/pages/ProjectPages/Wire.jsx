@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import "./components/ProjectPages.css";
 
 import BackButton from "../../components/BackButton/BackButton";
+import SectionNavigation from "./components/SectionNavigation/SectionNavigation";
 
 function Moin() {
   const [selectedSection, setSelectedSection] = useState("overview");
@@ -34,7 +35,7 @@ function Moin() {
             <div className="imgWrapper">
               <img
                 className="pp-img"
-                src="/assets/projectAssets/Wire/wireHome.webp"
+                src={`${process.env.PUBLIC_URL}/assets/projectAssets/WIRE/wireHome.webp`}
                 alt="WIRE homepage"
               />
             </div>
@@ -47,7 +48,7 @@ function Moin() {
             <div className="imgWrapper">
               <img
                 className="pp-img"
-                src="/assets/projectAssets/Wire/wireOverview.webp"
+                src={`${process.env.PUBLIC_URL}/assets/projectAssets/WIRE/wireOverview.webp`}
                 alt="WIRE homepage"
               />
             </div>
@@ -75,7 +76,7 @@ function Moin() {
             <div className="imgWrapper">
               <img
                 className="pp-img"
-                src="/assets/projectAssets/Wire/wireEvent.webp"
+                src={`${process.env.PUBLIC_URL}/assets/projectAssets/WIRE/wireEvent.webp`}
                 alt="WIRE event management UI"
               />
             </div>
@@ -95,7 +96,7 @@ function Moin() {
             <div className="imgWrapper">
               <img
                 className="pp-img reduceImgSize"
-                src="/assets/projectAssets/Wire/wireComponents.webp"
+                src={`${process.env.PUBLIC_URL}/assets/projectAssets/WIRE/wireComponents.webp`}
                 alt="Development process"
               />
             </div>
@@ -112,6 +113,12 @@ function Moin() {
         return <div>Select a section to display content.</div>;
     }
   };
+
+  const sections = [
+    { keyword: "overview", title: "Overview" },
+    { keyword: "design", title: "UI/UX Design" },
+    { keyword: "development", title: "Development" },
+  ];
 
   return (
     <div className="pp-container">
@@ -158,6 +165,11 @@ function Moin() {
         </div>
         <div className="fade-in" ref={contentRef}>
           <div className="pp-content">{renderSectionContent()}</div>
+          <SectionNavigation
+            sections={sections}
+            selectedSection={selectedSection}
+            setSelectedSection={setSelectedSection}
+          />
         </div>
       </div>
     </div>
