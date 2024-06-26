@@ -9,12 +9,18 @@ const SectionNavigation = ({ sections, selectedSection, setSelectedSection }) =>
   const nextSection =
     currentIndex < sections.length - 1 ? sections[currentIndex + 1] : null;
 
+  const handleSectionChange = (sectionKeyword) => {
+    setSelectedSection(sectionKeyword);
+    const scrollPosition = window.innerHeight * 0.4; // 20vh
+    window.scrollTo({ top: scrollPosition, behavior: "smooth" });
+  };
+
   return (
     <div className="section-navigation">
       {prevSection ? (
         <button
           className="button prev"
-          onClick={() => setSelectedSection(prevSection.keyword)}
+          onClick={() => handleSectionChange(prevSection.keyword)}
         >
           Previous: {prevSection.title}
         </button>
@@ -24,7 +30,7 @@ const SectionNavigation = ({ sections, selectedSection, setSelectedSection }) =>
       {nextSection && (
         <button
           className="button"
-          onClick={() => setSelectedSection(nextSection.keyword)}
+          onClick={() => handleSectionChange(nextSection.keyword)}
         >
           Next: {nextSection.title}
         </button>
