@@ -4,8 +4,6 @@
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
-    "@react-pdf-viewer/core": "^3.12.0",
-    "@react-pdf-viewer/default-layout": "^3.12.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -46,5 +44,8 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://barisGultekin.github.io/portfolio"
+  "homepage": "https://barisGultekin.github.io/portfolio",
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+  }
 }
