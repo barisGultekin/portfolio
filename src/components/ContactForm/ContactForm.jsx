@@ -62,6 +62,7 @@ const ContactForm = () => {
         <div className="form-group">
           <label>Message</label>
           <textarea
+            className="contactForm-textArea"
             name="message"
             placeholder="Your Message"
             required

@@ -85,6 +85,10 @@
     color: #000;
   }
 
+  .contactForm-textArea {
+    max-width: 100%;
+  }
+
   .loader {
     margin: 6px 0;
     font-size: 6px;
