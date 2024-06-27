@@ -1,6 +1,6 @@
 {
   "name": "baris-gultekin-portfolio",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
@@ -44,7 +44,7 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://barisGultekin.github.io/portfolio",
+  "homepage": "https://barisgultekin.com",
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
