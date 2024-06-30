@@ -28,9 +28,9 @@ function Moin() {
               particularly for college students. The project emerged from a
               clear demand within campus environments where managing and
               participating in sports events were inefficient and disorganized.
-              Developed using React.js, WIRE streamlines the event creation,
-              discovery, and participation process, making it easier for
-              students to engage in sporting activities.
+              Developed using React.js, WIRE provides event creation, discovery,
+              and participation process, making it easier for students to engage
+              in sporting activities.
             </p>
             <div className="imgWrapper">
               <img
@@ -41,9 +41,9 @@ function Moin() {
             </div>
             <p>
               The application targets college students interested in sports,
-              facilitating them to easily create, manage, and participate in
-              events. WIRE integrates intuitive interfaces that allow for quick
-              and easy navigation and event management.
+              allowing them to easily create, manage, and participate in events.
+              WIRE integrates intuitive interfaces that allow for quick and easy
+              navigation and event management.
             </p>
             <div className="imgWrapper">
               <img
@@ -66,6 +66,13 @@ function Moin() {
               interface supports rapid interaction to fit into the active
               lifestyles of its users.
             </p>
+            <div className="imgWrapper">
+              <img
+                className="pp-img"
+                src={`${process.env.PUBLIC_URL}/assets/projectAssets/WIRE/wireMobile.webp`}
+                alt="WIRE mobile UI screens"
+              />
+            </div>
             <h3>Event Management</h3>
             <p>
               Users can seamlessly create and manage events with minimal steps,

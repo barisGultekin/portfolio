@@ -40,14 +40,13 @@ function Ardeo() {
             </div>
             <p>
               In collaboration with their sales team, I designed a sales
-              software tailored specifically for retailers. This solution
-              enables sales personnel at the retail level to efficiently track
-              leads, recall customer details, and provide optimal offers. The
-              system not only streamlines the sales process but also generates
-              valuable data that can be utilized by executives at BSH Group or
-              the retailer companies. Additionally, I developed interactive
-              statistical tools that integrate seamlessly into their operational
-              processes.
+              software tailored specifically for retailers. Enabling sales
+              personnel at the retail level to efficiently track leads, recall
+              customer details, and provide optimal offers. The system not only
+              streamlines the sales process but also generates valuable data
+              that can be utilized by executives at BSH Group or the retailer
+              companies. Hence, I developed interactive statistical tools
+              that integrate seamlessly into their operational processes.
             </p>
           </div>
         );
@@ -76,7 +75,7 @@ function Ardeo() {
             <h3>Concept Design</h3>
             <p>
               The concept of boxes represent the versatility of the program and
-              its ease of use. The first tool of Ardeo is DDR (Data Driven
+              its ease of use. The initial tool of Ardeo is DDR (Data Driven
               Retail). You can see that the concept can be conveyed into a suite
               of different tools.
             </p>
@@ -101,7 +100,6 @@ function Ardeo() {
               intuitive design, requiring no prior training. The application
               must be as user-friendly as commonly used social media apps.
             </p>
-            <h3>Main Functions</h3>
             <p>
               The application offers four main functions: lead tracking, offer
               creation, activity tracking, and data analysis. All other
@@ -190,7 +188,7 @@ function Ardeo() {
             <br></br>
             <h3>Component Library</h3>
             <p>
-              Collaborated with a fellow developer to implement the visual
+              Collaborated with my fellow developer to implement the visual
               design of the application. We initiated the process by
               constructing a component library, employing modular design
               principles to ensure reusability and scalability. This library
