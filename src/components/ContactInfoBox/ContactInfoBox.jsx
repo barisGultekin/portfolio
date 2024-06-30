@@ -1,17 +1,43 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaRegEnvelope } from "react-icons/fa";
 import { FiPhone } from "react-icons/fi";
 import { TbLocation } from "react-icons/tb";
 import './ContactInfoBox.css';
 
 function ContactInfoBox({ type, content }) {
-  const [tooltipText, setTooltipText] = useState(type === 'email' ? 'Send' : 'Copy');
+  const [tooltipText, setTooltipText] = useState('');
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.matchMedia("(max-width: 768px)").matches);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (type === 'email') {
+      setTooltipText('Send');
+    } else if (type === 'phone' && isMobile) {
+      setTooltipText('Call');
+    } else {
+      setTooltipText('Copy');
+    }
+  }, [type, isMobile]);
 
   const handleCopy = () => {
     navigator.clipboard.writeText(content).then(() => {
       setTooltipText('Copied!');
       setTimeout(() => {
-        setTooltipText('Copy');
+        if (type === 'phone' && isMobile) {
+          setTooltipText('Call');
+        } else {
+          setTooltipText('Copy');
+        }
       }, 2000);
     });
   };
@@ -30,7 +56,9 @@ function ContactInfoBox({ type, content }) {
   };
 
   const handleClick = (e) => {
-    if (type !== 'email') {
+    if (type === 'phone' && isMobile) {
+      window.location.href = `tel:${content}`;
+    } else if (type !== 'email') {
       handleCopy();
     }
   };
