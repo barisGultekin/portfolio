@@ -7,7 +7,7 @@ import ScrollToTopButton from './components/ScrollToTopButton/ScrollToTopButton'
 
 import Home from './pages/Home/Home';
 import Contact from './pages/Contact/Contact';
-import Projects from './pages/Projects/Projects';
+import Works from './pages/Works/Works';
 
 import Privacy from './pages/Legals/Privacy';
 import Terms from './pages/Legals/Terms';
@@ -28,7 +28,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="projects" element={<Projects />} />
+            <Route path="projects" element={<Works />} />
             <Route path="contact" element={<Contact />} />
 
             <Route path="privacy" element={<Privacy />} />

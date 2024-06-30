@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import "./Projects.css";
+import "./Works.css";
 
 import SearchBar from "../../components/SearchBar/SearchBar";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import projectsData from "../../projectsData";
 
-const Projects = () => {
+const Works = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredProjects = projectsData.filter((project) =>
@@ -16,7 +16,7 @@ const Projects = () => {
     <div className="projects">
       <div className="projects-content">
         <div className="projects-header">
-          <h1>Projects</h1>
+          <h1>Work</h1>
           <p>
             Check out my projects across different fields. I have many more to
             add, so this page will be updated over time. Each project represents
@@ -38,4 +38,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Works;

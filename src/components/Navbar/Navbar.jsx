@@ -33,7 +33,7 @@ function Navbar() {
           </li>
           <li>
             <NavLink to="/projects" activeClassName="active">
-              Projects
+              Work
             </NavLink>
           </li>
           <li>
