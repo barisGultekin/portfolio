@@ -18,6 +18,7 @@ import Brevvit from './pages/ProjectPages/Brevvit';
 import ARFlip from './pages/ProjectPages/ARFlip';
 import EnvSoc from './pages/ProjectPages/EnvSoc';
 import Sailing from './pages/ProjectPages/Sailing';
+import Chair from './pages/ProjectPages/Chair';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
             <Route path="projects/arflip" element={<ARFlip />} />
             <Route path="projects/iztechsailing" element={<Sailing />} />
             <Route path="projects/envsoc" element={<EnvSoc />} />
+            <Route path="projects/chair-configurator" element={<Chair />} />
           </Route>
         </Routes>
       </Router>

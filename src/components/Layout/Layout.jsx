@@ -11,7 +11,8 @@ const Layout = () => {
     "/projects/brevvit",
     "/projects/arflip",
     "/projects/iztechsailing",
-    "/projects/envsoc"
+    "/projects/envsoc",
+    "/projects/chair-configurator"
   ];
   const showNavbar = !hideNavbarRoutes.includes(location.pathname);
 

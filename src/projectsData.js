@@ -1,5 +1,14 @@
 const projectsData = [
   {
+    id: 7,
+    slug: 'chair-configurator',
+    title: '3D Chair Configurator',
+    description: 'An interactive 3D chair configurator built with three.js and react.js',
+    imageUrl: `${process.env.PUBLIC_URL}/assets/projectAssets/Chair/chairCover.webp`,
+    tags: ['Frontend', 'Threejs', 'GSAP'],
+    featured: true
+  },
+  {
     id: 1,
     slug: 'ardeo',
     title: 'Ardeo',
@@ -33,7 +42,7 @@ const projectsData = [
     description: 'A mountable car accessory providing a head-up display with gesture controls.',
     imageUrl: `${process.env.PUBLIC_URL}/assets/projectAssets/ARFlip/arflipCover.webp`,
     tags: ['UI/UX','3D Design', 'Embedded'],
-    featured: true
+    featured: false
   },
   {
     id: 5,
