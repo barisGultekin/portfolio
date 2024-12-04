@@ -98,13 +98,22 @@ const Chair = () => {
             <div className="imgWrapper">
               <video
                 className="pp-img"
-                src={`${process.env.PUBLIC_URL}/assets/projectAssets/Chair/animation.webm`}
                 autoPlay
                 muted
                 loop
                 playsInline
                 alt="chair-animation"
-              />
+              >
+                <source
+                  src="/assets/projectAssets/Chair/animation.webm"
+                  type="video/webm"
+                />
+                <source
+                  src="/assets/projectAssets/Chair/animation.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
             </div>
             <p>
               To implement this feature, I utilized libraries like GSAP
